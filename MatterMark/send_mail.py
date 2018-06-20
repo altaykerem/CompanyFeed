@@ -14,7 +14,7 @@ def send_mail():
     password = dd_utils.get_mail_pass(account)
     """
 
-    send_file = open("MatterMark\query_results.txt", "r")
+    send_file = open("MatterMark/query_results.txt", "r")
     msg = MIMEText(send_file.read())
     send_file.close()
 
