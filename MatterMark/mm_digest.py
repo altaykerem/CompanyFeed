@@ -1,10 +1,10 @@
-import utils
 import requests
+from MatterMark import dd_utils
 
 # Get mattermark configuration
-config = utils.get_config()
-api_key = utils.get_api_key(config)
-base = utils.get_uri(config)
+config = dd_utils.get_config()
+api_key = dd_utils.get_api_key(config)
+base = dd_utils.get_uri(config)
 
 # Url's
 # company search endpoint

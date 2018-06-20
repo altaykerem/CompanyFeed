@@ -1,11 +1,11 @@
 import smtplib
-import utils
 from email.mime.text import MIMEText
+from MatterMark import dd_utils
 
 # google account
-account = utils.get_mail_credentials()
-address = utils.get_mail_address(account)
-password = utils.get_mail_pass(account)
+account = dd_utils.get_mail_credentials()
+address = dd_utils.get_mail_address(account)
+password = dd_utils.get_mail_pass(account)
 
 send_file = open("query_results.txt", "r")
 msg = MIMEText(send_file.read())
