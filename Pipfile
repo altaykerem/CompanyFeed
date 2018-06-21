@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 gunicorn = "*"
+requests = "2.19.1"
 
 [dev-packages]
 
