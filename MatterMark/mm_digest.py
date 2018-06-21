@@ -1,10 +1,9 @@
+import os
 import requests
-from MatterMark import dd_utils
 
 # Get mattermark configuration
-config = dd_utils.get_config()
-api_key = dd_utils.get_api_key(config)
-base = dd_utils.get_uri(config)
+api_key = os.environ.get("api_key")
+base = os.environ.get("mattermark_api")
 
 # Url's
 # company search endpoint
@@ -30,6 +29,32 @@ companies_payload = {
     "total_funding": "100000~"
 }
 
+
+# get a list of companies from mattermark
+# returns 50 companies each time it's called
+def get_companies(payload):
+    # mattermark call
+    print("Getting companies, page 1")
+    response = requests.get(companies_url, params=payload)
+    response.raise_for_status()
+
+    return response.json()
+
+
+def write_results(companies_json):
+    # Write results
+    wfile = open("query_results.txt", "w")
+    wfile.write("Check these out\n")
+    for company in companies_json["companies"]:
+        wfile.write("Company name: "+company["company_name"]+", domain: "+company["domain"]+"\n")
+    wfile.close()
+
+
+def write_mm_result():
+    companies = get_companies(companies_payload)
+    write_results(companies)
+
+
 """     example
 companies_payload = {
     "key":      api_key,
@@ -47,26 +72,3 @@ companies_payload = {
     "state":            "CA"
 }
 """
-
-
-# get a list of companies from mattermark
-# returns 50 companies each time it's called
-def get_companies(payload):
-    # mattermark call
-    print("Getting companies, page 1")
-    response = requests.get(companies_url, params=payload)
-    response.raise_for_status()
-
-    return response.json()
-
-
-companies = get_companies(companies_payload)
-
-print(companies)
-
-# Write results
-wfile = open("query_results.txt", "w")
-wfile.write("Check these out\n")
-for company in companies["companies"]:
-    wfile.write("Company name: "+company["company_name"]+", domain: "+company["domain"]+"\n")
-wfile.close()
