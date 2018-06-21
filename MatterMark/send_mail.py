@@ -23,7 +23,6 @@ def send_mail():
     msg['From'] = address
 
     s = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    print(address)
     s.login(address, password)
     s.sendmail(msg['From'], msg['To'], msg.as_string())
     s.quit()
