@@ -15,7 +15,7 @@ def send_mail():
     """
 
     # Send results saved in file
-    send_file = open("query_results.txt", "r")
+    send_file = open("/query_results.txt", "r")
     msg = MIMEText(send_file.read())
     send_file.close()
 
