@@ -3,6 +3,7 @@ import requests
 import json
 
 
+# This class is the parent class of organization queries
 class Query:
     currentPage = 0
     hasNextPage = True
@@ -11,7 +12,7 @@ class Query:
     api_base = ""
     api_key = ""
 
-    # Create query adds page information into the query
+    # Queries return information grouped in pages
     page_map = [', after: "0|50"', ', after: "1|50"', ', after: "2|50"', ', after: "3|50"', ', after: "4|50"',
                 ', after: "5|50"', ', after: "6|50"', ', after: "7|50"', ', after: "8|50"', ', after: "9|50"',
                 ', after: "10|50"']
@@ -21,16 +22,51 @@ class Query:
         self.api_base = os.environ.get("mm_graphql_api")
         self.api_key = os.environ.get("api_key")
 
-    def create_query(self):
-        return ""
+    def base_query(self, msfl):
+        # GraphQL wrapper for MatterMark
+        # For query schema please refer to -->
+        #       https://docs.mattermark.com/graphql_api/schema/index.html
+        # Returns a list of organizations with fields specified as below that satisfies conditions in child classes
+        query = """query {organizationSummaryQuery("""+msfl+""") {
+            organizations(first: 50""" + self.page_map[self.currentPage] + """) {
+                edges {
+                    cursor
+                    node {
+                        id
+                        name
+                        companyPersona {
+                            companyStage
+                            lastFundingAmount {
+                                value
+                                currency
+                            }
+                            lastFundingDate
+                        }
+                    }
+                }
+                pageInfo {
+                    hasNextPage
+                    startCursor
+                    hasPreviousPage
+                }
+                currentPage
+                totalResults
+            }}
+        }"""
 
-    def query(self):
+        # GraphQL structure is pretty similar to json, yet it's not meant to store data but to get related fields
+        # in JSON format.
+        # So the query defines what to retrieve from the database in the request. Format isn't KEY:VALUE,
+        # yet it's just the KEY.  Simply, you post the KEY and it returns the KEY:VALUE pairs.
+        return query
+
+    def query(self, query):
         # Create Header
         auth = 'Bearer ' + self.api_key
         header = {'Content-Type': 'application/graphql', 'Authorization': auth, 'Accept': 'application/json'}
 
         # Create Query String
-        query_str = self.create_query()
+        query_str = query
 
         # Send Request
         try:
@@ -43,3 +79,79 @@ class Query:
         except Exception as e:
             print("Problem while sending request: {}".format(e))
             return
+
+    @staticmethod
+    def org_info_query(org_id):
+        # Returns information related to the company given its id
+        org_query = """query {
+                organization(id: \""""+org_id+"""") {
+                    estFounded
+                    businessModels {
+                        name
+                    }
+                    industries {
+                        name
+                    }
+                    offices {
+                        location {
+                            city { name }
+                            country { iso3 }
+                            region { name }
+                        }
+                    }
+
+                }
+            }
+        """
+        return org_query
+
+    def page_info(self, data):
+        # Updates pages
+        self.totalResults = data['data']['organizationSummaryQuery']['organizations']['totalResults']
+        # !!!!!! Uncomment for use page usage (that is +50 companies returned)!!!!!!!!
+        # page_info = data['data']['organizationSummaryQuery']['organizations']['pageInfo']
+        # self.currentPage = data['data']['organizationSummaryQuery']['organizations']['currentPage']
+        # self.hasNextPage = page_info['hasNextPage']
+
+    def create_query(self):
+        # Override in child
+        return ""
+
+    def write_query(self):
+        # Write results to the file query_results
+        wfile = open("query_results.txt", "a")
+        while self.hasNextPage is True:
+            q_data = self.query(self.create_query())
+            print(q_data)
+            self.hasNextPage = False
+            self.page_info(q_data)
+            data_organizations = q_data['data']['organizationSummaryQuery']['organizations']['edges']
+            if q_data is not None:
+                print("Data successfully retrieved...")
+                for company in data_organizations:
+                    print(company)
+                    data_stem = company["node"]
+                    wfile.write(data_stem["name"] + ", ")
+                    wfile.write(data_stem["companyPersona"]["companyStage"] + ", ")
+                    funding = data_stem["companyPersona"]["lastFundingAmount"]
+
+                    if funding is not None:
+                        wfile.write(str(data_stem["companyPersona"]["lastFundingAmount"]["value"]))
+                        wfile.write(data_stem["companyPersona"]["lastFundingAmount"]["currency"] + ", ")
+                    else:
+                        wfile.write("None")
+
+                    funding_date = data_stem["companyPersona"]["lastFundingDate"]
+                    if funding_date is not None:
+                        wfile.write(data_stem["companyPersona"]["lastFundingDate"])
+                    else:
+                        wfile.write("None")
+
+                    org_id = data_stem["id"]
+                    print(self.query(self.org_info_query(org_id)))
+                    wfile.write("\n")
+            else:
+                print("Returned data is null...")
+                wfile.write("Data was not fetched")
+
+        wfile.close()

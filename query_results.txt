@@ -32,19 +32,23 @@ Oracle Corporation, exited (acquired), 14000000USD, 2005-10-11
 Google, exited (ipo), 25000000USD, 1999-06-07
 Facebook, exited (ipo), 1500000000USD, 2011-01-21
 Salesforce, exited (ipo), 46910000USD, 2000-10-01
-
-Recently funded but not yet progressed
-NAME, STAGE, LAST FUNDING, LAST FUNDING DATE
-
-
-Recently funded but not yet progressed
-NAME, STAGE, LAST FUNDING, LAST FUNDING DATE
-
-
-Recently funded but not yet progressed
-NAME, STAGE, LAST FUNDING, LAST FUNDING DATE
-
-
-Recently funded but not yet progressed
-NAME, STAGE, LAST FUNDING, LAST FUNDING DATE
-
+Airbnb, late, 1000000000USD, 2017-03-09
+Care.com, exited (ipo), 46400000USD, 2016-06-29
+Yelp, exited (ipo), 25000000USD, 2010-01-27
+King.com, exited (acquired), 43000000USD, 2005-09-01
+xfinity, exited (ipo), 725000000USD, 2013-05-08
+Postmates, late, 140000000USD, 2016-10-31
+Anytime Fitness, late, None2014-03-03
+Groupon, exited (ipo), 16200000USD, 2011-02-25
+Wag!, b, 4000000USD, 2017-03-31
+HomeAway, exited (acquired), 250000000USD, 2008-11-10
+ROBLOX, b, 92000000USD, 2017-03-14
+DocuSign, late, 300000000USD, 2015-10-08
+Medallia, late, 150000000USD, 2015-07-21
+Box, exited (ipo), 150000000USD, 2014-07-07
+New Tang Dynasty Television, no known funding, NoneNone
+SETN.com, no known funding, NoneNone
+Waymo, no known funding, NoneNone
+Okta, late, 75000000USD, 2015-09-08
+Slack, late, 208000000USD, 2016-04-01
+Houzz, late, 400000000USD, 2017-06-12
