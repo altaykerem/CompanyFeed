@@ -1,0 +1,50 @@
+
+Recently funded and on the radar
+NAME, STAGE, LAST FUNDING, LAST FUNDING DATE
+
+Ola, late, 50000000USD, 2017-06-14
+Houzz, late, 400000000USD, 2017-06-12
+ClassPass, c, 70000000USD, 2017-06-16
+Pinterest, late, 150000000USD, 2017-06-06
+ShipBob, c, 17500000USD, 2017-06-13
+Samsara, c, 40000000USD, 2017-06-22
+Cybereason, late, 100000000USD, 2017-06-21
+Algolia, b, 53000000USD, 2017-06-08
+Element AI, a, 102000000USD, 2017-06-14
+Blockchain, b, 40000000USD, 2017-06-22
+Snapdeal, late, 17485416USD, 2017-05-29
+
+Recently funded but not yet progressed
+NAME, STAGE, LAST FUNDING, LAST FUNDING DATE
+
+Rubrik, late, 180000000USD, 2017-04-28
+Outreach, c, 30000000USD, 2017-05-23
+IMPROBABLE, b, 500000000USD, 2017-05-11
+Remix, a, 10000000USD, 2017-05-09
+PandaDoc, b, 15000000USD, 2017-05-23
+Crew, b, 8000000USD, 2017-05-04
+
+Top 5 Highest scorers
+NAME, STAGE, LAST FUNDING, LAST FUNDING DATE
+
+Amazon, exited (ipo), 8000000USD, 1995-07-01
+Oracle Corporation, exited (acquired), 14000000USD, 2005-10-11
+Google, exited (ipo), 25000000USD, 1999-06-07
+Facebook, exited (ipo), 1500000000USD, 2011-01-21
+Salesforce, exited (ipo), 46910000USD, 2000-10-01
+
+Recently funded but not yet progressed
+NAME, STAGE, LAST FUNDING, LAST FUNDING DATE
+
+
+Recently funded but not yet progressed
+NAME, STAGE, LAST FUNDING, LAST FUNDING DATE
+
+
+Recently funded but not yet progressed
+NAME, STAGE, LAST FUNDING, LAST FUNDING DATE
+
+
+Recently funded but not yet progressed
+NAME, STAGE, LAST FUNDING, LAST FUNDING DATE
+

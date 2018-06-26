@@ -22,11 +22,9 @@ companies_payload = {
 
     # search parameters
     "industries":       "e-commerce|cloud computing|finance|banking|enterprise software|payments",
-    "stage":            "Pre Series A",
-    "employees":        "1~100",
     "country":          "USA|CAN",
-    "mattermark_score": "100~",
-    "total_funding": "100000~"
+    "momentum_score":   "1000~",
+    "mattermark_score": "1000~"
 }
 
 
@@ -55,7 +53,7 @@ def write_mm_result():
     write_results(companies)
 
 
-"""     example
+"""     example payload
 companies_payload = {
     "key":      api_key,
 
