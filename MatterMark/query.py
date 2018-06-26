@@ -18,7 +18,7 @@ class Query:
 
     def __init__(self):
         # Get config
-        self.api_base = os.environ.get("mattermark_api")
+        self.api_base = os.environ.get("mm_graphql_api")
         self.api_key = os.environ.get("api_key")
 
     def create_query(self):
