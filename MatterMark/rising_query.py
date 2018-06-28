@@ -14,7 +14,8 @@ class EmergingQuery(query.Query):
         msfl = """msfl:\"{\
         \\"dataset\\": \\"companies\\",\
         \\"filter\\":{\\"and\\": [\
-            {\\"organizationMetrics.weeklyMomentumScore.current\\":{\\"gte\\":0}},\
+            {\\"organizationMetrics.weeklyMomentumScore.current\\":{\\"gte\\":500}},\
+            {\\"organizationMetrics.growthScore.current\\":{\\"lte\\":1500}},\
             {\\"businessModels.name\\": \\"B2B\\" },\
             {\\"industries.name\\": {\\"in\\":\
                 [ \\"banking\\",\\"cloud\\", \\"enterprise software\\", \\"finance\\", \\"hardware\\",\
