@@ -30,7 +30,31 @@ class AssistanceQuery(query.Query):
     def write_query(self):
         # Write results to the file query_results
         wfile = open("query_results.txt", "a")
-        wfile.write("\nRecently funded but not yet progressed\n")
-        wfile.write("NAME, STAGE, LAST FUNDING, LAST FUNDING DATE\n\n")
+
+        open_table = """
+        <tr>
+            <td bgcolor="#ffffff">
+                <table border="1" cellpadding="0" cellspacing="0" width="100%%">
+                    <tr>
+                        <td colspan="4"><h3 align="center">
+        """
+        wfile.write(open_table)
+        wfile.write("Recently funded but not yet progressed")
+        wfile.write(" </h3></td></tr>")
+
+        table_columns = """
+        <tr>
+            <td colspan="1" align="center">Name</td>
+            <td colspan="1" align="center">Stage</td>
+            <td colspan="1" align="center">Last Funding</td>
+            <td colspan="1" align="center">Last Funding Date</td>
+        </tr>
+        """
+        wfile.write(table_columns)
         wfile.close()
+
         super().write_query()
+
+        wfile = open("query_results.txt", "a")
+        wfile.write("</table></td></tr>")
+        wfile.close()

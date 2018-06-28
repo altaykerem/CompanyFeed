@@ -122,36 +122,35 @@ class Query:
         wfile = open("query_results.txt", "a")
         while self.hasNextPage is True:
             q_data = self.query(self.create_query())
-            print(q_data)
             self.hasNextPage = False
             self.page_info(q_data)
             data_organizations = q_data['data']['organizationSummaryQuery']['organizations']['edges']
             if q_data is not None:
                 print("Data successfully retrieved...")
                 for company in data_organizations:
-                    print(company)
+                    wfile.write("<tr>\n")
+
                     data_stem = company["node"]
-                    wfile.write(data_stem["name"] + ", ")
-                    wfile.write(data_stem["companyPersona"]["companyStage"] + ", ")
+                    wfile.write("<td>"+data_stem["name"]+"</td>\n")
+                    wfile.write("<td>"+data_stem["companyPersona"]["companyStage"]+"</td>\n")
+
                     funding = data_stem["companyPersona"]["lastFundingAmount"]
-
                     if funding is not None:
-                        wfile.write(str(data_stem["companyPersona"]["lastFundingAmount"]["value"]))
-                        wfile.write(data_stem["companyPersona"]["lastFundingAmount"]["currency"] + ", ")
+                        wfile.write("<td>"+str(data_stem["companyPersona"]["lastFundingAmount"]["value"]))
+                        wfile.write(data_stem["companyPersona"]["lastFundingAmount"]["currency"]+"</td>\n")
                     else:
-                        wfile.write("None")
-
+                        wfile.write("<td>No data</td>\n")
                     funding_date = data_stem["companyPersona"]["lastFundingDate"]
                     if funding_date is not None:
-                        wfile.write(data_stem["companyPersona"]["lastFundingDate"])
+                        wfile.write("<td>"+data_stem["companyPersona"]["lastFundingDate"]+"</td>\n")
                     else:
-                        wfile.write("None")
+                        wfile.write("<td>No data</td>\n")
 
                     org_id = data_stem["id"]
-                    print(self.query(self.org_info_query(org_id)))
-                    wfile.write("\n")
+                    # print(self.query(self.org_info_query(org_id)))
+
+                    wfile.write("</tr>\n")
             else:
                 print("Returned data is null...")
-                wfile.write("Data was not fetched")
 
         wfile.close()

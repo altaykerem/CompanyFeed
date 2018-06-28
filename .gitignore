@@ -3,3 +3,4 @@ MatterMark/.idea/
 MatterMark/config.json
 MatterMark/__pycache__/
 MatterMark/sandbox_config.json
+Mailing/__pycache__/send_mail.cpython-36.pyc
