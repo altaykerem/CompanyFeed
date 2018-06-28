@@ -14,8 +14,7 @@ class EmergingQuery(query.Query):
         msfl = """msfl:\"{\
         \\"dataset\\": \\"companies\\",\
         \\"filter\\":{\\"and\\": [\
-            {\\"organizationMetrics.weeklyMomentumScore.current\\":{\\"gte\\":100}},\
-            {\\"companyPersona.monthsSinceLastFunding\\":3},\
+            {\\"organizationMetrics.weeklyMomentumScore.current\\":{\\"gte\\":0}},\
             {\\"businessModels.name\\": \\"B2B\\" },\
             {\\"industries.name\\": {\\"in\\":\
                 [ \\"banking\\",\\"cloud\\", \\"enterprise software\\", \\"finance\\", \\"hardware\\",\
@@ -48,7 +47,7 @@ class EmergingQuery(query.Query):
                         <td colspan="6"><h3 align="center">
         """
         wfile.write(open_table)
-        wfile.write("Recently funded and on the radar")
+        wfile.write("Growing this week")
         wfile.write(" </h3></td></tr>")
 
         table_columns = """

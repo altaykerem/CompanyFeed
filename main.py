@@ -1,4 +1,4 @@
-from MatterMark import high_score_query, angel_query, rising_query
+from MatterMark import latest_query, angel_query, rising_query
 from Mailing import send_mail as sender
 
 # #######Delete previous file content
@@ -9,7 +9,7 @@ f.close()
 # write the result in the file query_results.txt
 rising_query.EmergingQuery().write_query()
 angel_query.AssistanceQuery().write_query()
-# high_score_query.ScoreQuery().write_query()
+latest_query.LatestQuery().write_query()
 
 # #######Invoke send mail
 sender.send_mail()

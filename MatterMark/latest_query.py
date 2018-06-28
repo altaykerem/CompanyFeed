@@ -1,7 +1,7 @@
 from MatterMark import query
 
 
-class AssistanceQuery(query.Query):
+class LatestQuery(query.Query):
 
     def __init__(self):
         # Get config
@@ -14,8 +14,7 @@ class AssistanceQuery(query.Query):
         msfl = """msfl:\"{\
         \\"dataset\\": \\"companies\\",\
         \\"filter\\":{\\"and\\": [\
-            {\\"organizationMetrics.weeklyMomentumScore.current\\":{\\"lte\\":0}},\
-            {\\"companyPersona.monthsSinceLastFunding\\":3},\
+            {\\"organizationMetrics.weeklyMomentumScore.current\\":{\\"gte\\":0}},\
             {\\"businessModels.name\\": \\"B2B\\" },\
             {\\"industries.name\\": {\\"in\\":\
                 [ \\"banking\\",\\"cloud\\", \\"enterprise software\\", \\"finance\\", \\"hardware\\",\
@@ -27,18 +26,15 @@ class AssistanceQuery(query.Query):
                 {\\"companyPersona.stage\\": \\"a\\"},\
                 {\\"companyPersona.stage\\": \\"b\\"},\
                 {\\"companyPersona.stage\\": \\"c\\"},\
-                {\\"companyPersona.stage\\": \\"exited(acquired)\\"},\
-                {\\"companyPersona.stage\\": \\"late\\"}]},\
             { \\"offices.location.country.iso3\\": \\"USA\\" }\
         ]},\
-        \\"sort\\": [ { \\"organizationMetrics.growthScore.current\\": \\"desc\\" } ]\
+        \\"sort\\": [ { \\"companyPersona.lastFundingDate\\": \\"desc\\" } ]\
         }\" """
 
         search_query = self.base_query(msfl)
         return search_query
 
     def write_query(self):
-        # Write results to the file query_results
         wfile = open("query_results.txt", "a")
 
         open_table = """
@@ -49,7 +45,7 @@ class AssistanceQuery(query.Query):
                         <td colspan="6"><h3 align="center">
         """
         wfile.write(open_table)
-        wfile.write("Recently funded but not progressed this week")
+        wfile.write("Latest fundings")
         wfile.write(" </h3></td></tr>")
 
         table_columns = """
