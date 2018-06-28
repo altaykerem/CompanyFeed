@@ -11,18 +11,28 @@ class ScoreQuery(query.Query):
         # Targeted and sorted queries with MSFL
         # For msfl queries please refer to -->
         #   https://docs.mattermark.com/graphql_api/msfl/index.html
-        msfl_dataset = """\\"dataset\\": \\"companies\\" """
-
-        msfl_filter = """\\"filter\\":{\\"and\\": ["""
-        growth = """{\\"organizationMetrics.growthScore.current\\":{\\"gte\\":1000}}"""
-        momentum = """{\\"organizationMetrics.weeklyMomentumScore.current\\":{\\"gte\\":1000}}"""
-        msfl_filter = msfl_filter + growth + ","
-        msfl_filter = msfl_filter + momentum
-        msfl_filter += "]}"
-
-        msfl_sort = """\\"sort\\": [ { \\"organizationMetrics.growthScore.current\\": \\"desc\\" } ]"""
-
-        msfl = "msfl:\"{" + msfl_dataset + "," + msfl_filter + "," + msfl_sort + "}\""
+        msfl = """msfl:\"{\
+        \\"dataset\\": \\"companies\\",\
+        \\"filter\\":{\\"and\\": [\
+            {\\"organizationMetrics.growthScore.current\\":{\\"gte\\":1000}},\
+            {\\"organizationMetrics.weeklyMomentumScore.current\\":{\\"gte\\":1000}},\
+            {\\"businessModels.name\\": \\"B2B\\" },\
+            {\\"industries.name\\": {\\"in\\":\
+                [ \\"banking\\",\\"cloud computing\\", \\"enterprise software\\", \\"finance\\", \\"hardware\\",\
+                \\"human resources\\", \\"internet of things\\", \\"insurance\\", \\"lending\\", \\"mobile\\",\
+                \\"payments\\", \\"robotics\\", \\"security\\", \\"software development\\",\
+                \\"technical support\\"] } },\
+            {\\"or\\" : [\
+                {\\"companyPersona.stage\\": \\"pre series a\\"},\
+                {\\"companyPersona.stage\\": \\"a\\"},\
+                {\\"companyPersona.stage\\": \\"b\\"},\
+                {\\"companyPersona.stage\\": \\"c\\"},\
+                {\\"companyPersona.stage\\": \\"exited(acquired)\\"},\
+                {\\"companyPersona.stage\\": \\"late\\"}]},\
+            { \\"offices.location.country.iso3\\": \\"USA\\" }\
+        ]},\
+        \\"sort\\": [ { \\"organizationMetrics.growthScore.current\\": \\"desc\\" } ]\
+        }\" """
 
         search_query = self.base_query(msfl)
         return search_query
@@ -36,10 +46,10 @@ class ScoreQuery(query.Query):
             <td bgcolor="#ffffff">
                 <table border="1" cellpadding="0" cellspacing="0" width="100%%">
                     <tr>
-                        <td colspan="4"><h3 align="center">
+                        <td colspan="6"><h3 align="center">
         """
         wfile.write(open_table)
-        wfile.write("Top 5 Highest scorers")
+        wfile.write("Top 10 Highest scorers")
         wfile.write(" </h3></td></tr>")
 
         table_columns = """
@@ -48,6 +58,8 @@ class ScoreQuery(query.Query):
             <td colspan="1" align="center">Stage</td>
             <td colspan="1" align="center">Last Funding</td>
             <td colspan="1" align="center">Last Funding Date</td>
+            <td colspan="1" align="center">Domain</td>
+            <td colspan="1" align="center">Region</td>
         </tr>
         """
         wfile.write(table_columns)

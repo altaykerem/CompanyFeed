@@ -3,290 +3,61 @@
             <td bgcolor="#ffffff">
                 <table border="1" cellpadding="0" cellspacing="0" width="100%%">
                     <tr>
-                        <td colspan="4"><h3 align="center">
+                        <td colspan="6"><h3 align="center">
         Recently funded and on the radar </h3></td></tr>
         <tr>
             <td colspan="1" align="center">Name</td>
             <td colspan="1" align="center">Stage</td>
             <td colspan="1" align="center">Last Funding</td>
             <td colspan="1" align="center">Last Funding Date</td>
+            <td colspan="1" align="center">Domain</td>
+            <td colspan="1" align="center">Region</td>
         </tr>
-        <tr>
-<td>Ola</td>
-<td>late</td>
-<td>50000000USD</td>
-<td>2017-06-14</td>
-</tr>
-<tr>
-<td>Houzz</td>
-<td>late</td>
-<td>400000000USD</td>
-<td>2017-06-12</td>
-</tr>
-<tr>
-<td>ClassPass</td>
-<td>c</td>
-<td>70000000USD</td>
-<td>2017-06-16</td>
-</tr>
-<tr>
-<td>Pinterest</td>
-<td>late</td>
-<td>150000000USD</td>
-<td>2017-06-06</td>
-</tr>
-<tr>
-<td>ShipBob</td>
-<td>c</td>
-<td>17500000USD</td>
-<td>2017-06-13</td>
-</tr>
-<tr>
-<td>Samsara</td>
-<td>c</td>
-<td>40000000USD</td>
-<td>2017-06-22</td>
-</tr>
-<tr>
-<td>Cybereason</td>
-<td>late</td>
-<td>100000000USD</td>
-<td>2017-06-21</td>
-</tr>
-<tr>
-<td>Algolia</td>
-<td>b</td>
-<td>53000000USD</td>
-<td>2017-06-08</td>
-</tr>
-<tr>
-<td>Element AI</td>
-<td>a</td>
-<td>102000000USD</td>
-<td>2017-06-14</td>
-</tr>
-<tr>
-<td>Blockchain</td>
-<td>b</td>
-<td>40000000USD</td>
-<td>2017-06-22</td>
-</tr>
-<tr>
-<td>Snapdeal</td>
-<td>late</td>
-<td>17485416USD</td>
-<td>2017-05-29</td>
-</tr>
-</table></td></tr>
+        </table></td></tr>
         <tr>
             <td bgcolor="#ffffff">
                 <table border="1" cellpadding="0" cellspacing="0" width="100%%">
                     <tr>
-                        <td colspan="4"><h3 align="center">
+                        <td colspan="6"><h3 align="center">
         Recently funded but not yet progressed </h3></td></tr>
         <tr>
             <td colspan="1" align="center">Name</td>
             <td colspan="1" align="center">Stage</td>
             <td colspan="1" align="center">Last Funding</td>
             <td colspan="1" align="center">Last Funding Date</td>
+            <td colspan="1" align="center">Domain</td>
+            <td colspan="1" align="center">Region</td>
         </tr>
         <tr>
-<td>Rubrik</td>
-<td>late</td>
-<td>180000000USD</td>
-<td>2017-04-28</td>
-</tr>
-<tr>
-<td>Outreach</td>
+<td>Qualtrics</td>
 <td>c</td>
-<td>30000000USD</td>
-<td>2017-05-23</td>
+<td>180000000USD</td>
+<td>2017-04-12</td>
+<td>qualtrics.com</td>
+<td>Salt Lake City</td>
 </tr>
 <tr>
-<td>IMPROBABLE</td>
+<td>Looker</td>
+<td>late</td>
+<td>81500000USD</td>
+<td>2017-03-30</td>
+<td>looker.com</td>
+<td>Bay Area</td>
+</tr>
+<tr>
+<td>Reltio</td>
+<td>c</td>
+<td>40000000USD</td>
+<td>2017-04-18</td>
+<td>reltio.com</td>
+<td>Bay Area</td>
+</tr>
+<tr>
+<td>Cyber GRX</td>
 <td>b</td>
-<td>500000000USD</td>
-<td>2017-05-11</td>
-</tr>
-<tr>
-<td>Remix</td>
-<td>a</td>
-<td>10000000USD</td>
-<td>2017-05-09</td>
-</tr>
-<tr>
-<td>PandaDoc</td>
-<td>b</td>
-<td>15000000USD</td>
-<td>2017-05-23</td>
-</tr>
-<tr>
-<td>Crew</td>
-<td>b</td>
-<td>8000000USD</td>
-<td>2017-05-04</td>
-</tr>
-</table></td></tr>
-        <tr>
-            <td bgcolor="#ffffff">
-                <table border="1" cellpadding="0" cellspacing="0" width="100%%">
-                    <tr>
-                        <td colspan="4"><h3 align="center">
-        Top 5 Highest scorers </h3></td></tr>
-        <tr>
-            <td colspan="1" align="center">Name</td>
-            <td colspan="1" align="center">Stage</td>
-            <td colspan="1" align="center">Last Funding</td>
-            <td colspan="1" align="center">Last Funding Date</td>
-        </tr>
-        <tr>
-<td>Amazon</td>
-<td>exited (ipo)</td>
-<td>8000000USD</td>
-<td>1995-07-01</td>
-</tr>
-<tr>
-<td>Oracle Corporation</td>
-<td>exited (acquired)</td>
-<td>14000000USD</td>
-<td>2005-10-11</td>
-</tr>
-<tr>
-<td>Google</td>
-<td>exited (ipo)</td>
-<td>25000000USD</td>
-<td>1999-06-07</td>
-</tr>
-<tr>
-<td>Facebook</td>
-<td>exited (ipo)</td>
-<td>1500000000USD</td>
-<td>2011-01-21</td>
-</tr>
-<tr>
-<td>Salesforce</td>
-<td>exited (ipo)</td>
-<td>46910000USD</td>
-<td>2000-10-01</td>
-</tr>
-<tr>
-<td>Airbnb</td>
-<td>late</td>
-<td>1000000000USD</td>
-<td>2017-03-09</td>
-</tr>
-<tr>
-<td>Care.com</td>
-<td>exited (ipo)</td>
-<td>46400000USD</td>
-<td>2016-06-29</td>
-</tr>
-<tr>
-<td>Yelp</td>
-<td>exited (ipo)</td>
-<td>25000000USD</td>
-<td>2010-01-27</td>
-</tr>
-<tr>
-<td>King.com</td>
-<td>exited (acquired)</td>
-<td>43000000USD</td>
-<td>2005-09-01</td>
-</tr>
-<tr>
-<td>xfinity</td>
-<td>exited (ipo)</td>
-<td>725000000USD</td>
-<td>2013-05-08</td>
-</tr>
-<tr>
-<td>Postmates</td>
-<td>late</td>
-<td>140000000USD</td>
-<td>2016-10-31</td>
-</tr>
-<tr>
-<td>Anytime Fitness</td>
-<td>late</td>
-<td>No data</td>
-<td>2014-03-03</td>
-</tr>
-<tr>
-<td>Groupon</td>
-<td>exited (ipo)</td>
-<td>16200000USD</td>
-<td>2011-02-25</td>
-</tr>
-<tr>
-<td>Wag!</td>
-<td>b</td>
-<td>4000000USD</td>
-<td>2017-03-31</td>
-</tr>
-<tr>
-<td>HomeAway</td>
-<td>exited (acquired)</td>
-<td>250000000USD</td>
-<td>2008-11-10</td>
-</tr>
-<tr>
-<td>ROBLOX</td>
-<td>b</td>
-<td>92000000USD</td>
-<td>2017-03-14</td>
-</tr>
-<tr>
-<td>DocuSign</td>
-<td>late</td>
-<td>300000000USD</td>
-<td>2015-10-08</td>
-</tr>
-<tr>
-<td>Medallia</td>
-<td>late</td>
-<td>150000000USD</td>
-<td>2015-07-21</td>
-</tr>
-<tr>
-<td>Box</td>
-<td>exited (ipo)</td>
-<td>150000000USD</td>
-<td>2014-07-07</td>
-</tr>
-<tr>
-<td>New Tang Dynasty Television</td>
-<td>no known funding</td>
-<td>No data</td>
-<td>No data</td>
-</tr>
-<tr>
-<td>SETN.com</td>
-<td>no known funding</td>
-<td>No data</td>
-<td>No data</td>
-</tr>
-<tr>
-<td>Waymo</td>
-<td>no known funding</td>
-<td>No data</td>
-<td>No data</td>
-</tr>
-<tr>
-<td>Okta</td>
-<td>late</td>
-<td>75000000USD</td>
-<td>2015-09-08</td>
-</tr>
-<tr>
-<td>Slack</td>
-<td>late</td>
-<td>208000000USD</td>
-<td>2016-04-01</td>
-</tr>
-<tr>
-<td>Houzz</td>
-<td>late</td>
-<td>400000000USD</td>
-<td>2017-06-12</td>
+<td>20000000USD</td>
+<td>2017-04-18</td>
+<td>cybergrx.com</td>
+<td>Denver</td>
 </tr>
 </table></td></tr>

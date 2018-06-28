@@ -28,7 +28,7 @@ class Query:
         #       https://docs.mattermark.com/graphql_api/schema/index.html
         # Returns a list of organizations with fields specified as below that satisfies conditions in child classes
         query = """query {organizationSummaryQuery("""+msfl+""") {
-            organizations(first: 50""" + self.page_map[self.currentPage] + """) {
+            organizations(first: 10""" + self.page_map[self.currentPage] + """) {
                 edges {
                     cursor
                     node {
@@ -86,6 +86,9 @@ class Query:
         org_query = """query {
                 organization(id: \""""+org_id+"""") {
                     estFounded
+                    domains {
+                        domain
+                    }
                     businessModels {
                         name
                     }
@@ -147,7 +150,9 @@ class Query:
                         wfile.write("<td>No data</td>\n")
 
                     org_id = data_stem["id"]
-                    # print(self.query(self.org_info_query(org_id)))
+                    org_data = self.query(self.org_info_query(org_id))['data']['organization']
+                    wfile.write("<td>" + org_data['domains'][0]['domain'] + "</td>\n")
+                    wfile.write("<td>" + org_data['offices'][0]['location']['region']['name'] + "</td>\n")
 
                     wfile.write("</tr>\n")
             else:

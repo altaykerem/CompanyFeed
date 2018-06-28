@@ -9,7 +9,7 @@ def send_mail():
     password = os.environ.get("mail_pass")
 
     # ###Form html
-    file_base = "/app"
+    file_base = "C:/Users/HP/Desktop/DailyDigest"
 
     head_file = open(file_base+"/Mailing/mail_head.txt", "r")
     mail_head = head_file.read()
@@ -30,7 +30,7 @@ def send_mail():
     # send_file = open("/app/query_results.txt", "r")
     msg = MIMEText(send_html, 'html')
 
-    msg['Subject'] = "On the right track my man"
+    msg['Subject'] = "Daily mattermark"
     msg['To'] = "kerem.alty@gmail.com"
     msg['From'] = address
 
