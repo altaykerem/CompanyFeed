@@ -9,7 +9,7 @@ def send_mail():
     password = os.environ.get("mail_pass")
 
     # ###Form html
-    file_base = "C:/Users/HP/Desktop/DailyDigest"
+    file_base = "/app"
 
     head_file = open(file_base+"/Mailing/mail_head.txt", "r")
     mail_head = head_file.read()
