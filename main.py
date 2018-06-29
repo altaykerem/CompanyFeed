@@ -5,7 +5,7 @@ from Mailing import send_mail as sender
 sched = BlockingScheduler(timezone="UTC")
 
 
-@sched.scheduled_job('cron', day_of_week='fri', hour=22, minute=1)
+@sched.scheduled_job('cron', day_of_week='fri', hour=22, minute=6)
 def scheduled_job():
     # #######Delete previous file content
     f = open("query_results.txt", "w")
