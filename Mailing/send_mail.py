@@ -30,8 +30,11 @@ def send_mail():
     # send_file = open("/app/query_results.txt", "r")
     msg = MIMEText(send_html, 'html')
 
+    recipients = [os.environ.get("a_mail"), os.environ.get("b_mail"),
+                  os.environ.get("c_mail"), os.environ.get("k_mail")]
+
     msg['Subject'] = "Daily mattermark"
-    msg['To'] = "kerem.alty@gmail.com"
+    msg['To'] = ", ".join(recipients)
     msg['From'] = address
 
     s = smtplib.SMTP_SSL('smtp.gmail.com', 465)
