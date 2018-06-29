@@ -72,7 +72,7 @@ class Query:
         try:
             response = requests.post(url=self.api_base, headers=header, data=query_str)
             if response.status_code == requests.codes.ok:
-                self.log("Request is successful with code {} ...".format(response.status_code))
+                print("Request is successful with code {} ...".format(response.status_code))
                 return json.loads(response.content)
             else:
                 self.log("Error in response: {}".format(response.raise_for_status()))
