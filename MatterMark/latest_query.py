@@ -26,6 +26,8 @@ class LatestQuery(query.Query):
                 {\\"companyPersona.stage\\": \\"a\\"},\
                 {\\"companyPersona.stage\\": \\"b\\"},\
                 {\\"companyPersona.stage\\": \\"c\\"},\
+                {\\"companyPersona.stage\\": \\"exited(acquired)\\"},\
+                {\\"companyPersona.stage\\": \\"late\\"}]},\
             { \\"offices.location.country.iso3\\": \\"USA\\" }\
         ]},\
         \\"sort\\": [ { \\"companyPersona.lastFundingDate\\": \\"desc\\" } ]\
@@ -66,3 +68,6 @@ class LatestQuery(query.Query):
         wfile = open("query_results.txt", "a")
         wfile.write("</table></td></tr>")
         wfile.close()
+
+
+LatestQuery().write_query()
