@@ -72,12 +72,12 @@ class Query:
         try:
             response = requests.post(url=self.api_base, headers=header, data=query_str)
             if response.status_code == requests.codes.ok:
-                print("Request is successful with code {} ...".format(response.status_code))
+                self.log("Request is successful with code {} ...".format(response.status_code))
                 return json.loads(response.content)
             else:
-                print("Error in response: {}".format(response.raise_for_status()))
+                self.log("Error in response: {}".format(response.raise_for_status()))
         except Exception as e:
-            print("Problem while sending request: {}".format(e))
+            self.log("Problem while sending request: {}".format(e))
             return
 
     @staticmethod
@@ -156,6 +156,11 @@ class Query:
 
                     wfile.write("</tr>\n")
             else:
-                print("Returned data is null...")
+                self.log("Returned data is null...")
 
+        wfile.close()
+
+    def log(self, text):
+        wfile = open("log", "a")
+        wfile.write(text)
         wfile.close()
