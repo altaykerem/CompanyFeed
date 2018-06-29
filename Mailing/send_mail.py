@@ -30,7 +30,8 @@ def send_mail():
     # send_file = open("/app/query_results.txt", "r")
     msg = MIMEText(send_html, 'html')
 
-    recipients = [ os.environ.get("k_mail")]
+    recipients = [os.environ.get("k_mail"),
+                  "asoysal14 @ ku.edu.tr"]
 
     msg['Subject'] = "Daily mattermark"
     msg['To'] = ", ".join(recipients)
