@@ -68,6 +68,3 @@ class LatestQuery(query.Query):
         wfile = open("query_results.txt", "a")
         wfile.write("</table></td></tr>")
         wfile.close()
-
-
-LatestQuery().write_query()
