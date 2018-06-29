@@ -160,7 +160,8 @@ class Query:
 
         wfile.close()
 
-    def log(self, text):
+    @staticmethod
+    def log(text):
         wfile = open("log", "a")
         wfile.write(text)
         wfile.close()
