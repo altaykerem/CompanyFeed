@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 gunicorn = "*"
 requests = "*"
+apscheduler = "*"
 
 [dev-packages]
 

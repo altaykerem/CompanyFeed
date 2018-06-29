@@ -1,4 +1,4 @@
-from MatterMark import latest_query, angel_query, rising_query
+from MatterMark import rising_query
 from Mailing import send_mail as sender
 
 # #######Delete previous file content
