@@ -5,7 +5,7 @@ from Mailing import send_mail as sender
 sched = BlockingScheduler(timezone="UTC")
 
 
-@sched.scheduled_job('cron', day_of_week='fri', hour=22, minute=6)
+@sched.scheduled_job('cron', day_of_week='mon', hour=14, minute=30)
 def scheduled_job():
     # #######Delete previous file content
     f = open("query_results.txt", "w")
@@ -14,8 +14,6 @@ def scheduled_job():
     # #######Get mattermark digest;
     # write the result in the file query_results.txt
     rising_query.EmergingQuery().write_query()
-    # angel_query.AssistanceQuery().write_query()
-    # latest_query.LatestQuery().write_query()
 
     # #######Invoke send mail
     sender.send_mail()

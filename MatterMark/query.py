@@ -1,6 +1,7 @@
 import os
 import requests
 import json
+from Utils import meta_extractor
 
 
 # This class is the parent class of organization queries
@@ -151,9 +152,15 @@ class Query:
 
                     org_id = data_stem["id"]
                     org_data = self.query(self.org_info_query(org_id))['data']['organization']
-                    wfile.write("<td>" + org_data['domains'][0]['domain'] + "</td>\n")
+                    domain = org_data['domains'][0]['domain']
+                    wfile.write("<td>" + domain + "</td>\n")
                     wfile.write("<td>" + org_data['offices'][0]['location']['region']['name'] + "</td>\n")
+                    wfile.write("</tr>\n")
 
+                    wfile.write("<tr>\n")
+                    wfile.write("<td colspan=\"2\"><img src=\""+meta_extractor.get_image(domain) +
+                                "\" style=\"width:186px;border:0;\"></td>\n")
+                    wfile.write("<td colspan=\"4\">Description: "+meta_extractor.get_description(domain)+"</td>")
                     wfile.write("</tr>\n")
             else:
                 self.log("Returned data is null...")
