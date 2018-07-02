@@ -8,8 +8,7 @@ sched = BlockingScheduler(timezone="UTC")
 @sched.scheduled_job('cron', day_of_week='mon', hour=14, minute=30)
 def scheduled_job():
     # #######Delete previous file content
-    f = open("query_results.txt", "w")
-    f.close()
+    open("query_results.txt", "w").close()
 
     # #######Get mattermark digest;
     # write the result in the file query_results.txt

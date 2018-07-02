@@ -15,6 +15,7 @@ def get_description(domain):
 
     return "No description"
 
+
 def get_image(domain):
     r = requests.get("http://"+domain)
     soup = BeautifulSoup(r.content, "html.parser")

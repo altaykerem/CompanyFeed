@@ -4,22 +4,7 @@
                 <table border="1" cellpadding="0" cellspacing="0" width="100%%">
                     <tr>
                         <td colspan="6"><h3 align="center">
-        Recently funded and on the radar </h3></td></tr>
-        <tr>
-            <td colspan="1" align="center">Name</td>
-            <td colspan="1" align="center">Stage</td>
-            <td colspan="1" align="center">Last Funding</td>
-            <td colspan="1" align="center">Last Funding Date</td>
-            <td colspan="1" align="center">Domain</td>
-            <td colspan="1" align="center">Region</td>
-        </tr>
-        </table></td></tr>
-        <tr>
-            <td bgcolor="#ffffff">
-                <table border="1" cellpadding="0" cellspacing="0" width="100%%">
-                    <tr>
-                        <td colspan="6"><h3 align="center">
-        Recently funded but not yet progressed </h3></td></tr>
+        Growing this week </h3></td></tr>
         <tr>
             <td colspan="1" align="center">Name</td>
             <td colspan="1" align="center">Stage</td>
@@ -29,35 +14,80 @@
             <td colspan="1" align="center">Region</td>
         </tr>
         <tr>
-<td>Qualtrics</td>
+<td>Leanplum</td>
 <td>c</td>
-<td>180000000USD</td>
-<td>2017-04-12</td>
-<td>qualtrics.com</td>
-<td>Salt Lake City</td>
+<td>29000000USD</td>
+<td>2016-10-18</td>
+<td>leanplum.com</td>
+<td>Bay Area</td>
 </tr>
 <tr>
-<td>Looker</td>
+<td colspan="2"><img src="https://storage.googleapis.com/cdn-leanplum-images/1/2017/09/homepage_og.jpg" style="width:186px;border:0;"></td>
+<td colspan="4">Description: We help mobile teams orchestrate multi-channel campaigns — from messaging to the in-app experience — all from a single mobile marketing platform.</td></tr>
+<tr>
+<td>Pinterest</td>
 <td>late</td>
-<td>81500000USD</td>
-<td>2017-03-30</td>
-<td>looker.com</td>
+<td>150000000USD</td>
+<td>2017-06-06</td>
+<td>pinterest.com</td>
 <td>Bay Area</td>
 </tr>
 <tr>
-<td>Reltio</td>
-<td>c</td>
+<td colspan="2"><img src="https://s.pinimg.com/images/facebook_share_image.png" style="width:186px;border:0;"></td>
+<td colspan="4">Description: Discover recipes, home ideas, style inspiration and other ideas to try.</td></tr>
+<tr>
+<td>Glassdoor</td>
+<td>late</td>
 <td>40000000USD</td>
-<td>2017-04-18</td>
-<td>reltio.com</td>
+<td>2016-06-03</td>
+<td>glassdoor.com</td>
 <td>Bay Area</td>
 </tr>
 <tr>
-<td>Cyber GRX</td>
-<td>b</td>
-<td>20000000USD</td>
-<td>2017-04-18</td>
-<td>cybergrx.com</td>
-<td>Denver</td>
+<td colspan="2"><img src="https://png.icons8.com/ios/50/000000/fish.png" style="width:186px;border:0;"></td>
+<td colspan="4">Description: No description</td></tr>
+<tr>
+<td>Eventbrite</td>
+<td>late</td>
+<td>60000000USD</td>
+<td>2013-04-22</td>
+<td>eventbrite.com</td>
+<td>Bay Area</td>
 </tr>
+<tr>
+<td colspan="2"><img src="https://cdn.evbstatic.com/s3-build/perm_001/48d2e1/django/images/logos/eb_logo_white_1200x1200.png" style="width:186px;border:0;"></td>
+<td colspan="4">Description: None</td></tr>
+<tr>
+<td>Cybereason</td>
+<td>late</td>
+<td>100000000USD</td>
+<td>2017-06-21</td>
+<td>cybereason.com</td>
+<td>Boston</td>
+</tr>
+<tr>
+<td colspan="2"><img src="https://png.icons8.com/ios/50/000000/fish.png" style="width:186px;border:0;"></td>
+<td colspan="4">Description: Complete next-generation endpoint security: EDR, NGAV, anti-ransomware, fileless malware protection, and managed services powered by a proprietary AI hunting engine.</td></tr>
+<tr>
+<td>Evernote</td>
+<td>late</td>
+<td>20000000USD</td>
+<td>2014-11-09</td>
+<td>evernote.com</td>
+<td>Bay Area</td>
+</tr>
+<tr>
+<td colspan="2"><img src="https://evernote.com/img/meta/evernote-twitter.jpg" style="width:186px;border:0;"></td>
+<td colspan="4">Description: Evernote is the app that keeps your notes organized. Memos are synced so they're accessible anywhere, and searchable so you always find what you need. Learn more!</td></tr>
+<tr>
+<td>Kickstarter</td>
+<td>a</td>
+<td>10000000USD</td>
+<td>2011-03-18</td>
+<td>kickstarter.com</td>
+<td>New York</td>
+</tr>
+<tr>
+<td colspan="2"><img src="https://static.kickstarter.com/assets/site/social/og-kickstarter-social-d58bfe030adf82001e25d3f7015eedb8ab84bc4bf9eeeeede5f8d8b0d02d641a.png" style="width:186px;border:0;"></td>
+<td colspan="4">Description: Kickstarter is the world's largest funding platform for creative projects. A home for film, music, art, theater, games, comics, design, photography, and more.</td></tr>
 </table></td></tr>

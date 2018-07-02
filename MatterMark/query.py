@@ -132,36 +132,54 @@ class Query:
             if q_data is not None:
                 print("Data successfully retrieved...")
                 for company in data_organizations:
-                    wfile.write("<tr>\n")
-
+                    # Access company data
                     data_stem = company["node"]
-                    wfile.write("<td>"+data_stem["name"]+"</td>\n")
-                    wfile.write("<td>"+data_stem["companyPersona"]["companyStage"]+"</td>\n")
-
-                    funding = data_stem["companyPersona"]["lastFundingAmount"]
-                    if funding is not None:
-                        wfile.write("<td>"+str(data_stem["companyPersona"]["lastFundingAmount"]["value"]))
-                        wfile.write(data_stem["companyPersona"]["lastFundingAmount"]["currency"]+"</td>\n")
-                    else:
-                        wfile.write("<td>No data</td>\n")
-                    funding_date = data_stem["companyPersona"]["lastFundingDate"]
-                    if funding_date is not None:
-                        wfile.write("<td>"+data_stem["companyPersona"]["lastFundingDate"]+"</td>\n")
-                    else:
-                        wfile.write("<td>No data</td>\n")
-
                     org_id = data_stem["id"]
                     org_data = self.query(self.org_info_query(org_id))['data']['organization']
                     domain = org_data['domains'][0]['domain']
-                    wfile.write("<td>" + domain + "</td>\n")
-                    wfile.write("<td>" + org_data['offices'][0]['location']['region']['name'] + "</td>\n")
+                    funding = data_stem["companyPersona"]["lastFundingAmount"]
+                    funding_amount = "Undisclosed"
+                    currency = ""
+                    funding_date_info = data_stem["companyPersona"]["lastFundingDate"]
+                    funding_date = "Undisclosed"
+                    locaion = org_data['offices'][0]['location']['region']['name']
+
+                    if funding is not None:
+                        funding_amount = str(data_stem["companyPersona"]["lastFundingAmount"]["value"])
+                        currency = data_stem["companyPersona"]["lastFundingAmount"]["currency"]
+
+                    if funding_date_info is not None:
+                        funding_date = data_stem["companyPersona"]["lastFundingDate"]
+
+                    # Write company data in html table format
+                    wfile.write("<tr>\n")
+
+                    wfile.write("<td><img src=\""+meta_extractor.get_image(domain) +
+                                "\" style=\"height:126px;width:126px;border:0;\"></td>\n")
+                    wfile.write("<td> <table width=\"100%\">\n")
+
+                    wfile.write("<tr><td colspan=\"5\" align=\"center\"><b>")
+                    wfile.write(data_stem["name"])
+                    wfile.write("</b></td></tr>\n")
+
+                    wfile.write("<tr><td colspan=\"5\" align=\"center\">")
+                    wfile.write(meta_extractor.get_description(domain))
+                    wfile.write("</td></tr>\n")
+
+                    wfile.write("<tr><td colspan=\"1\" align=\"center\"><u>Stage</u></td>\n")
+                    wfile.write("<td colspan=\"1\" align=\"center\"><u>Last Funding</u></td>\n")
+                    wfile.write("<td colspan=\"1\" align=\"center\"><u>Last Funding Date</u></td>\n")
+                    wfile.write("<td colspan=\"1\" align=\"center\"><u>Domain</u></td>\n")
+                    wfile.write("<td colspan=\"1\" align=\"center\"><u>Region</u></td></tr>\n")
+
+                    wfile.write("<tr><td align=\"center\">"+data_stem["companyPersona"]["companyStage"]+"</td>")
+                    wfile.write("<td align=\"center\">"+funding_amount+currency+"</td>\n")
+                    wfile.write("<td align=\"center\">"+funding_date+"</td>\n")
+                    wfile.write("<td align=\"center\">" + domain + "</td>\n")
+                    wfile.write("<td align=\"center\">" + locaion + "</td>\n")
                     wfile.write("</tr>\n")
 
-                    wfile.write("<tr>\n")
-                    wfile.write("<td colspan=\"2\"><img src=\""+meta_extractor.get_image(domain) +
-                                "\" style=\"width:186px;border:0;\"></td>\n")
-                    wfile.write("<td colspan=\"4\">Description: "+meta_extractor.get_description(domain)+"</td>")
-                    wfile.write("</tr>\n")
+                    wfile.write("</table></td></tr>")
             else:
                 self.log("Returned data is null...")
 
