@@ -158,6 +158,7 @@ class Query:
                     wfile.write("</tr>\n")
 
                     wfile.write("<tr>\n")
+                    print(domain)
                     print(meta_extractor.get_image(domain))
                     print(meta_extractor.get_description(domain))
                     wfile.write("<td colspan=\"2\"><img src=\""+meta_extractor.get_image(domain) +
