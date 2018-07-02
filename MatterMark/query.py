@@ -158,7 +158,10 @@ class Query:
                     wfile.write("</tr>\n")
 
                     wfile.write("<tr>\n")
-                    wfile.write("<td colspan=\"2\"><img src=\""+meta_extractor.get_image(domain)+"\" style=\"width:186px;border:0;\"></td>\n")
+                    print(meta_extractor.get_image(domain))
+                    print(meta_extractor.get_description(domain))
+                    wfile.write("<td colspan=\"2\"><img src=\""+meta_extractor.get_image(domain) +
+                                "\" style=\"width:186px;border:0;\"></td>\n")
                     wfile.write("<td colspan=\"4\">Description: "+meta_extractor.get_description(domain)+"</td>")
                     wfile.write("</tr>\n")
             else:
