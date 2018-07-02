@@ -3,91 +3,109 @@
             <td bgcolor="#ffffff">
                 <table border="1" cellpadding="0" cellspacing="0" width="100%%">
                     <tr>
-                        <td colspan="6"><h3 align="center">
-        Growing this week </h3></td></tr>
-        <tr>
-            <td colspan="1" align="center">Name</td>
-            <td colspan="1" align="center">Stage</td>
-            <td colspan="1" align="center">Last Funding</td>
-            <td colspan="1" align="center">Last Funding Date</td>
-            <td colspan="1" align="center">Domain</td>
-            <td colspan="1" align="center">Region</td>
-        </tr>
-        <tr>
-<td>Leanplum</td>
-<td>c</td>
-<td>29000000USD</td>
-<td>2016-10-18</td>
-<td>leanplum.com</td>
-<td>Bay Area</td>
+                        <td colspan="6"><h3 align="center">Growing this week </h3></td></tr><tr>
+<td><img src="https://storage.googleapis.com/cdn-leanplum-images/1/2017/09/homepage_og.jpg" style="height:126px;width:126px;border:0;"></td>
+<td> <table width="100%">
+<tr><td colspan="5" align="center"><b>Leanplum</b></td></tr>
+<tr><td colspan="5" align="center">We help mobile teams orchestrate multi-channel campaigns — from messaging to the in-app experience — all from a single mobile marketing platform.</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">c</td><td align="center">29000000USD</td>
+<td align="center">2016-10-18</td>
+<td align="center">leanplum.com</td>
+<td align="center">Bay Area</td>
 </tr>
-<tr>
-<td colspan="2"><img src="https://storage.googleapis.com/cdn-leanplum-images/1/2017/09/homepage_og.jpg" style="width:186px;border:0;"></td>
-<td colspan="4">Description: We help mobile teams orchestrate multi-channel campaigns — from messaging to the in-app experience — all from a single mobile marketing platform.</td></tr>
-<tr>
-<td>Pinterest</td>
-<td>late</td>
-<td>150000000USD</td>
-<td>2017-06-06</td>
-<td>pinterest.com</td>
-<td>Bay Area</td>
+</table></td></tr><tr>
+<td><img src="https://s.pinimg.com/images/facebook_share_image.png" style="height:126px;width:126px;border:0;"></td>
+<td> <table width="100%">
+<tr><td colspan="5" align="center"><b>Pinterest</b></td></tr>
+<tr><td colspan="5" align="center">Discover recipes, home ideas, style inspiration and other ideas to try.</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">late</td><td align="center">150000000USD</td>
+<td align="center">2017-06-06</td>
+<td align="center">pinterest.com</td>
+<td align="center">Bay Area</td>
 </tr>
-<tr>
-<td colspan="2"><img src="https://s.pinimg.com/images/facebook_share_image.png" style="width:186px;border:0;"></td>
-<td colspan="4">Description: Discover recipes, home ideas, style inspiration and other ideas to try.</td></tr>
-<tr>
-<td>Glassdoor</td>
-<td>late</td>
-<td>40000000USD</td>
-<td>2016-06-03</td>
-<td>glassdoor.com</td>
-<td>Bay Area</td>
+</table></td></tr><tr>
+<td><img src="https://png.icons8.com/ios/50/000000/fish.png" style="height:126px;width:126px;border:0;"></td>
+<td> <table width="100%">
+<tr><td colspan="5" align="center"><b>Glassdoor</b></td></tr>
+<tr><td colspan="5" align="center">No description</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">late</td><td align="center">40000000USD</td>
+<td align="center">2016-06-03</td>
+<td align="center">glassdoor.com</td>
+<td align="center">Bay Area</td>
 </tr>
-<tr>
-<td colspan="2"><img src="https://png.icons8.com/ios/50/000000/fish.png" style="width:186px;border:0;"></td>
-<td colspan="4">Description: No description</td></tr>
-<tr>
-<td>Eventbrite</td>
-<td>late</td>
-<td>60000000USD</td>
-<td>2013-04-22</td>
-<td>eventbrite.com</td>
-<td>Bay Area</td>
+</table></td></tr><tr>
+<td><img src="https://cdn.evbstatic.com/s3-build/perm_001/48d2e1/django/images/logos/eb_logo_white_1200x1200.png" style="height:126px;width:126px;border:0;"></td>
+<td> <table width="100%">
+<tr><td colspan="5" align="center"><b>Eventbrite</b></td></tr>
+<tr><td colspan="5" align="center">None</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">late</td><td align="center">60000000USD</td>
+<td align="center">2013-04-22</td>
+<td align="center">eventbrite.com</td>
+<td align="center">Bay Area</td>
 </tr>
-<tr>
-<td colspan="2"><img src="https://cdn.evbstatic.com/s3-build/perm_001/48d2e1/django/images/logos/eb_logo_white_1200x1200.png" style="width:186px;border:0;"></td>
-<td colspan="4">Description: None</td></tr>
-<tr>
-<td>Cybereason</td>
-<td>late</td>
-<td>100000000USD</td>
-<td>2017-06-21</td>
-<td>cybereason.com</td>
-<td>Boston</td>
+</table></td></tr><tr>
+<td><img src="https://png.icons8.com/ios/50/000000/fish.png" style="height:126px;width:126px;border:0;"></td>
+<td> <table width="100%">
+<tr><td colspan="5" align="center"><b>Cybereason</b></td></tr>
+<tr><td colspan="5" align="center">Complete next-generation endpoint security: EDR, NGAV, anti-ransomware, fileless malware protection, and managed services powered by a proprietary AI hunting engine.</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">late</td><td align="center">100000000USD</td>
+<td align="center">2017-06-21</td>
+<td align="center">cybereason.com</td>
+<td align="center">Boston</td>
 </tr>
-<tr>
-<td colspan="2"><img src="https://png.icons8.com/ios/50/000000/fish.png" style="width:186px;border:0;"></td>
-<td colspan="4">Description: Complete next-generation endpoint security: EDR, NGAV, anti-ransomware, fileless malware protection, and managed services powered by a proprietary AI hunting engine.</td></tr>
-<tr>
-<td>Evernote</td>
-<td>late</td>
-<td>20000000USD</td>
-<td>2014-11-09</td>
-<td>evernote.com</td>
-<td>Bay Area</td>
+</table></td></tr><tr>
+<td><img src="https://evernote.com/img/meta/evernote-twitter.jpg" style="height:126px;width:126px;border:0;"></td>
+<td> <table width="100%">
+<tr><td colspan="5" align="center"><b>Evernote</b></td></tr>
+<tr><td colspan="5" align="center">Evernote is the app that keeps your notes organized. Memos are synced so they're accessible anywhere, and searchable so you always find what you need. Learn more!</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">late</td><td align="center">20000000USD</td>
+<td align="center">2014-11-09</td>
+<td align="center">evernote.com</td>
+<td align="center">Bay Area</td>
 </tr>
-<tr>
-<td colspan="2"><img src="https://evernote.com/img/meta/evernote-twitter.jpg" style="width:186px;border:0;"></td>
-<td colspan="4">Description: Evernote is the app that keeps your notes organized. Memos are synced so they're accessible anywhere, and searchable so you always find what you need. Learn more!</td></tr>
-<tr>
-<td>Kickstarter</td>
-<td>a</td>
-<td>10000000USD</td>
-<td>2011-03-18</td>
-<td>kickstarter.com</td>
-<td>New York</td>
+</table></td></tr><tr>
+<td><img src="https://static.kickstarter.com/assets/site/social/og-kickstarter-social-d58bfe030adf82001e25d3f7015eedb8ab84bc4bf9eeeeede5f8d8b0d02d641a.png" style="height:126px;width:126px;border:0;"></td>
+<td> <table width="100%">
+<tr><td colspan="5" align="center"><b>Kickstarter</b></td></tr>
+<tr><td colspan="5" align="center">Kickstarter is the world's largest funding platform for creative projects. A home for film, music, art, theater, games, comics, design, photography, and more.</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">a</td><td align="center">10000000USD</td>
+<td align="center">2011-03-18</td>
+<td align="center">kickstarter.com</td>
+<td align="center">New York</td>
 </tr>
-<tr>
-<td colspan="2"><img src="https://static.kickstarter.com/assets/site/social/og-kickstarter-social-d58bfe030adf82001e25d3f7015eedb8ab84bc4bf9eeeeede5f8d8b0d02d641a.png" style="width:186px;border:0;"></td>
-<td colspan="4">Description: Kickstarter is the world's largest funding platform for creative projects. A home for film, music, art, theater, games, comics, design, photography, and more.</td></tr>
-</table></td></tr>
+</table></td></tr></table></td></tr>

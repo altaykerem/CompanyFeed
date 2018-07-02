@@ -38,6 +38,7 @@ class EmergingQuery(query.Query):
         return search_query
 
     def write_query(self):
+        # Write results to the file query_results
         wfile = open("query_results.txt", "a")
 
         open_table = """

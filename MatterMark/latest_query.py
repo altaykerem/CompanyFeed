@@ -37,6 +37,7 @@ class LatestQuery(query.Query):
         return search_query
 
     def write_query(self):
+        # Write results to the file query_results
         wfile = open("query_results.txt", "a")
 
         open_table = """
@@ -44,23 +45,10 @@ class LatestQuery(query.Query):
             <td bgcolor="#ffffff">
                 <table border="1" cellpadding="0" cellspacing="0" width="100%%">
                     <tr>
-                        <td colspan="6"><h3 align="center">
-        """
+                        <td colspan="6"><h3 align="center">"""
         wfile.write(open_table)
         wfile.write("Latest fundings")
         wfile.write(" </h3></td></tr>")
-
-        table_columns = """
-        <tr>
-            <td colspan="1" align="center">Name</td>
-            <td colspan="1" align="center">Stage</td>
-            <td colspan="1" align="center">Last Funding</td>
-            <td colspan="1" align="center">Last Funding Date</td>
-            <td colspan="1" align="center">Domain</td>
-            <td colspan="1" align="center">Region</td>
-        </tr>
-        """
-        wfile.write(table_columns)
         wfile.close()
 
         super().write_query()
