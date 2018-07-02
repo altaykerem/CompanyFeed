@@ -13,6 +13,7 @@ def get_description(domain):
         elif 'property' in tag.attrs.keys() and tag.attrs['property'].strip().lower() == 'og:description':
             return tag.attrs['content']
 
+    return "No description"
 
 def get_image(domain):
     r = requests.get("http://"+domain)
@@ -24,3 +25,5 @@ def get_image(domain):
             return tag.attrs['content']
         elif 'name' in tag.attrs.keys() and tag.attrs['name'].strip().lower() == 'twitter:image':
             return tag.attrs['content']
+
+    return "https://png.icons8.com/ios/50/000000/fish.png"
