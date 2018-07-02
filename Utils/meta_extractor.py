@@ -24,7 +24,3 @@ def get_image(domain):
             return tag.attrs['content']
         elif 'name' in tag.attrs.keys() and tag.attrs['name'].strip().lower() == 'twitter:image':
             return tag.attrs['content']
-
-
-print(get_image("leanplum.com"))
-print(get_description("leanplum.com"))
