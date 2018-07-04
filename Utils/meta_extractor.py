@@ -3,7 +3,10 @@ import requests
 
 
 def get_description(domain):
-    r = requests.get("http://"+domain)
+    try:
+        r = requests.get("http://" + domain)
+    except requests.exceptions.SSLError:
+        return "No description"
     soup = BeautifulSoup(r.content, "html.parser")
 
     meta = soup.find_all('meta')
@@ -17,7 +20,10 @@ def get_description(domain):
 
 
 def get_image(domain):
-    r = requests.get("http://"+domain)
+    try:
+        r = requests.get("http://" + domain)
+    except requests.exceptions.SSLError:
+        return "No description"
     soup = BeautifulSoup(r.content, "html.parser")
 
     meta = soup.find_all('meta')
