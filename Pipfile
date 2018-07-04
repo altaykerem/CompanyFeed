@@ -8,6 +8,7 @@ gunicorn = "*"
 requests = "*"
 apscheduler = "*"
 "beautifulsoup4" = "*"
+tweepy = "*"
 
 [dev-packages]
 

@@ -1,5 +1,5 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
-from MatterMark import rising_query
+from MatterMark import latest_query
 from Mailing import send_mail as sender
 
 sched = BlockingScheduler(timezone="UTC")
@@ -12,7 +12,7 @@ def scheduled_job():
 
     # #######Get mattermark digest;
     # write the result in the file query_results.txt
-    rising_query.EmergingQuery().write_query()
+    latest_query.LatestQuery().write_query()
 
     # #######Invoke send mail
     sender.send_mail()
