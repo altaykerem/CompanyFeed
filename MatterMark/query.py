@@ -79,9 +79,9 @@ class Query:
                 print("Request is successful with code {} ...".format(response.status_code))
                 return json.loads(response.content)
             else:
-                self.log("Error in response: {}".format(response.raise_for_status()))
+                utils.log("Error in response: {}".format(response.raise_for_status()))
         except Exception as e:
-            self.log("Problem while sending request: {}".format(e))
+            utils.log("Problem while sending request: {}".format(e))
             return
 
     @staticmethod
@@ -187,12 +187,6 @@ class Query:
 
                     wfile.write("</table></td></tr>")
             else:
-                self.log("Returned data is null...")
+                utils.log("Returned data is null...")
 
-        wfile.close()
-
-    @staticmethod
-    def log(text):
-        wfile = open("log", "a")
-        wfile.write(text)
         wfile.close()
