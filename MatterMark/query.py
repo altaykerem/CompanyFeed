@@ -1,7 +1,9 @@
 import os
 import requests
 import json
+import Trello
 from Utils import meta_extractor
+from Utils import utils
 
 
 # This class is the parent class of organization queries
@@ -9,6 +11,7 @@ class Query:
     currentPage = 0
     hasNextPage = True
     totalResults = None
+    pageSize = 10
 
     api_base = ""
     api_key = ""
@@ -29,7 +32,7 @@ class Query:
         #       https://docs.mattermark.com/graphql_api/schema/index.html
         # Returns a list of organizations with fields specified as below that satisfies conditions in child classes
         query = """query {organizationSummaryQuery("""+msfl+""") {
-            organizations(first: 10""" + self.page_map[self.currentPage] + """) {
+            organizations(first:""" + str(self.pageSize) + self.page_map[self.currentPage] + """) {
                 edges {
                     cursor
                     node {
@@ -142,22 +145,25 @@ class Query:
                     currency = ""
                     funding_date_info = data_stem["companyPersona"]["lastFundingDate"]
                     funding_date = "Undisclosed"
-                    locaion = org_data['offices'][0]['location']['region']['name']
+                    location = org_data['offices'][0]['location']['region']['name']
 
                     if funding is not None:
                         funding_amount = str(data_stem["companyPersona"]["lastFundingAmount"]["value"])
                         currency = data_stem["companyPersona"]["lastFundingAmount"]["currency"]
+                        funding_amount = utils.number_formatter(funding_amount)
 
                     if funding_date_info is not None:
                         funding_date = data_stem["companyPersona"]["lastFundingDate"]
 
+                    # Assign company
+                    Trello.assign.add_assignment(domain)
+
                     # Write company data in html table format
                     wfile.write("<tr>\n")
-
-                    wfile.write("<td><img src=\""+meta_extractor.get_image(domain) +
-                                "\" style=\"height:126px;width:126px;border:0;\"></td>\n")
                     wfile.write("<td> <table width=\"100%\">\n")
 
+                    wfile.write("<tr><td colspan=\"5\" align=\"center\"><img src=\""+meta_extractor.get_image(domain) +
+                                "\" style=\"height:126px;width:126px;border:0;\"></td></tr>\n")
                     wfile.write("<tr><td colspan=\"5\" align=\"center\"><b>")
                     wfile.write(data_stem["name"])
                     wfile.write("</b></td></tr>\n")
@@ -176,7 +182,7 @@ class Query:
                     wfile.write("<td align=\"center\">"+funding_amount+currency+"</td>\n")
                     wfile.write("<td align=\"center\">"+funding_date+"</td>\n")
                     wfile.write("<td align=\"center\">" + domain + "</td>\n")
-                    wfile.write("<td align=\"center\">" + locaion + "</td>\n")
+                    wfile.write("<td align=\"center\">" + location + "</td>\n")
                     wfile.write("</tr>\n")
 
                     wfile.write("</table></td></tr>")

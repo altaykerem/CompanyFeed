@@ -5,7 +5,7 @@ import requests
 def get_description(domain):
     try:
         r = requests.get("http://" + domain)
-    except requests.exceptions.SSLError:
+    except requests.exceptions:
         return "No description"
     soup = BeautifulSoup(r.content, "html.parser")
 
@@ -22,8 +22,8 @@ def get_description(domain):
 def get_image(domain):
     try:
         r = requests.get("http://" + domain)
-    except requests.exceptions.SSLError:
-        return "No description"
+    except requests.exceptions:
+        return "https://png.icons8.com/ios/50/000000/unavailable-cloud.png"
     soup = BeautifulSoup(r.content, "html.parser")
 
     meta = soup.find_all('meta')
@@ -33,4 +33,4 @@ def get_image(domain):
         elif 'name' in tag.attrs.keys() and tag.attrs['name'].strip().lower() == 'twitter:image':
             return tag.attrs['content']
 
-    return "https://png.icons8.com/ios/50/000000/fish.png"
+    return "https://png.icons8.com/ios/50/000000/unavailable-cloud.png"
