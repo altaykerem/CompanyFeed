@@ -13,10 +13,7 @@ def scheduled_job():
 
     # #######Get mattermark digest;
     # write the result in the file query_results.txt
-    result = latest_query.LatestQuery().write_query()
-    while not result:
-        utils.clean_file("query_results.txt")
-        result = latest_query.LatestQuery().write_query()
+    latest_query.LatestQuery().write_query()
 
     # #######Invoke send mail
     sender.send_mail()
