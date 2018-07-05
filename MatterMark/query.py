@@ -1,7 +1,7 @@
 import os
 import requests
 import json
-import Trello
+from Trello import assign
 from Utils import meta_extractor
 from Utils import utils
 
@@ -156,7 +156,7 @@ class Query:
                         funding_date = data_stem["companyPersona"]["lastFundingDate"]
 
                     # Assign company
-                    Trello.assign.add_assignment(domain)
+                    assign.add_assignment(domain)
 
                     # Write company data in html table format
                     wfile.write("<tr>\n")
