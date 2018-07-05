@@ -7,5 +7,9 @@ def number_formatter(n):
 
 def log(text):
     wfile = open("log", "a")
-    wfile.write(text)
+    wfile.write(text+"\n")
     wfile.close()
+
+
+def clean_file(file):
+    open(file, "w").close()

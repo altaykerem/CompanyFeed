@@ -130,9 +130,9 @@ class Query:
         while self.hasNextPage is True:
             q_data = self.query(self.create_query())
             self.hasNextPage = False
-            self.page_info(q_data)
-            data_organizations = q_data['data']['organizationSummaryQuery']['organizations']['edges']
             if q_data is not None:
+                self.page_info(q_data)
+                data_organizations = q_data['data']['organizationSummaryQuery']['organizations']['edges']
                 print("Data successfully retrieved...")
                 for company in data_organizations:
                     # Access company data
@@ -188,5 +188,6 @@ class Query:
                     wfile.write("</table></td></tr>")
             else:
                 utils.log("Returned data is null...")
-
+                return False
         wfile.close()
+        return True

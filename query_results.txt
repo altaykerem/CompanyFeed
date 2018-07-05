@@ -3,109 +3,154 @@
             <td bgcolor="#ffffff">
                 <table border="1" cellpadding="0" cellspacing="0" width="100%%">
                     <tr>
-                        <td colspan="6"><h3 align="center">Growing this week </h3></td></tr><tr>
-<td><img src="https://storage.googleapis.com/cdn-leanplum-images/1/2017/09/homepage_og.jpg" style="height:126px;width:126px;border:0;"></td>
-<td> <table width="100%">
-<tr><td colspan="5" align="center"><b>Leanplum</b></td></tr>
-<tr><td colspan="5" align="center">We help mobile teams orchestrate multi-channel campaigns — from messaging to the in-app experience — all from a single mobile marketing platform.</td></tr>
-<tr><td colspan="1" align="center"><u>Stage</u></td>
-<td colspan="1" align="center"><u>Last Funding</u></td>
-<td colspan="1" align="center"><u>Last Funding Date</u></td>
-<td colspan="1" align="center"><u>Domain</u></td>
-<td colspan="1" align="center"><u>Region</u></td></tr>
-<tr><td align="center">c</td><td align="center">29000000USD</td>
-<td align="center">2016-10-18</td>
-<td align="center">leanplum.com</td>
-<td align="center">Bay Area</td>
-</tr>
-</table></td></tr><tr>
-<td><img src="https://s.pinimg.com/images/facebook_share_image.png" style="height:126px;width:126px;border:0;"></td>
-<td> <table width="100%">
-<tr><td colspan="5" align="center"><b>Pinterest</b></td></tr>
-<tr><td colspan="5" align="center">Discover recipes, home ideas, style inspiration and other ideas to try.</td></tr>
-<tr><td colspan="1" align="center"><u>Stage</u></td>
-<td colspan="1" align="center"><u>Last Funding</u></td>
-<td colspan="1" align="center"><u>Last Funding Date</u></td>
-<td colspan="1" align="center"><u>Domain</u></td>
-<td colspan="1" align="center"><u>Region</u></td></tr>
-<tr><td align="center">late</td><td align="center">150000000USD</td>
-<td align="center">2017-06-06</td>
-<td align="center">pinterest.com</td>
-<td align="center">Bay Area</td>
-</tr>
-</table></td></tr><tr>
-<td><img src="https://png.icons8.com/ios/50/000000/fish.png" style="height:126px;width:126px;border:0;"></td>
-<td> <table width="100%">
-<tr><td colspan="5" align="center"><b>Glassdoor</b></td></tr>
+                        <td colspan="6"><h3 align="center">Latest fundings </h3></td></tr><tr>
+<td> <table width="100%" style="border-spacing: 20px;">
+<tr><td colspan="5" align="center"><img src="https://png.icons8.com/ios/50/000000/unavailable-cloud.png" style="height:126px;border:0;"></td></tr>
+<tr><td colspan="5" align="center"><b>Jask</b></td></tr>
 <tr><td colspan="5" align="center">No description</td></tr>
 <tr><td colspan="1" align="center"><u>Stage</u></td>
 <td colspan="1" align="center"><u>Last Funding</u></td>
 <td colspan="1" align="center"><u>Last Funding Date</u></td>
 <td colspan="1" align="center"><u>Domain</u></td>
 <td colspan="1" align="center"><u>Region</u></td></tr>
-<tr><td align="center">late</td><td align="center">40000000USD</td>
-<td align="center">2016-06-03</td>
-<td align="center">glassdoor.com</td>
+<tr><td align="center">b</td><td align="center">25M USD</td>
+<td align="center">2018-06-28</td>
+<td align="center">jask.io</td>
 <td align="center">Bay Area</td>
 </tr>
 </table></td></tr><tr>
-<td><img src="https://cdn.evbstatic.com/s3-build/perm_001/48d2e1/django/images/logos/eb_logo_white_1200x1200.png" style="height:126px;width:126px;border:0;"></td>
-<td> <table width="100%">
-<tr><td colspan="5" align="center"><b>Eventbrite</b></td></tr>
-<tr><td colspan="5" align="center">None</td></tr>
+<td> <table width="100%" style="border-spacing: 20px;">
+<tr><td colspan="5" align="center"><img src="https://png.icons8.com/ios/50/000000/unavailable-cloud.png" style="height:126px;border:0;"></td></tr>
+<tr><td colspan="5" align="center"><b>Cerebri</b></td></tr>
+<tr><td colspan="5" align="center">No description</td></tr>
 <tr><td colspan="1" align="center"><u>Stage</u></td>
 <td colspan="1" align="center"><u>Last Funding</u></td>
 <td colspan="1" align="center"><u>Last Funding Date</u></td>
 <td colspan="1" align="center"><u>Domain</u></td>
 <td colspan="1" align="center"><u>Region</u></td></tr>
-<tr><td align="center">late</td><td align="center">60000000USD</td>
-<td align="center">2013-04-22</td>
-<td align="center">eventbrite.com</td>
-<td align="center">Bay Area</td>
+<tr><td align="center">a</td><td align="center">5M USD</td>
+<td align="center">2018-06-28</td>
+<td align="center">cerebri.com</td>
+<td align="center">Austin</td>
 </tr>
 </table></td></tr><tr>
-<td><img src="https://png.icons8.com/ios/50/000000/fish.png" style="height:126px;width:126px;border:0;"></td>
-<td> <table width="100%">
-<tr><td colspan="5" align="center"><b>Cybereason</b></td></tr>
-<tr><td colspan="5" align="center">Complete next-generation endpoint security: EDR, NGAV, anti-ransomware, fileless malware protection, and managed services powered by a proprietary AI hunting engine.</td></tr>
+<td> <table width="100%" style="border-spacing: 20px;">
+<tr><td colspan="5" align="center"><img src="https://www.bitsighttech.com/hubfs/images/landing-page-thumbnails/LP-Thumbnail-Scalable-VRM-Program-Ebook-1.png?t=1530822852596#keepProtocol" style="height:126px;border:0;"></td></tr>
+<tr><td colspan="5" align="center"><b>BitSight Technologies</b></td></tr>
+<tr><td colspan="5" align="center">BitSight Security Ratings are used for third party vendor risk management, benchmarking cybersecurity performance, underwriting cyber insurance policies & more.</td></tr>
 <tr><td colspan="1" align="center"><u>Stage</u></td>
 <td colspan="1" align="center"><u>Last Funding</u></td>
 <td colspan="1" align="center"><u>Last Funding Date</u></td>
 <td colspan="1" align="center"><u>Domain</u></td>
 <td colspan="1" align="center"><u>Region</u></td></tr>
-<tr><td align="center">late</td><td align="center">100000000USD</td>
-<td align="center">2017-06-21</td>
-<td align="center">cybereason.com</td>
+<tr><td align="center">late</td><td align="center">60M USD</td>
+<td align="center">2018-06-28</td>
+<td align="center">bitsighttech.com</td>
 <td align="center">Boston</td>
 </tr>
 </table></td></tr><tr>
-<td><img src="https://evernote.com/img/meta/evernote-twitter.jpg" style="height:126px;width:126px;border:0;"></td>
-<td> <table width="100%">
-<tr><td colspan="5" align="center"><b>Evernote</b></td></tr>
-<tr><td colspan="5" align="center">Evernote is the app that keeps your notes organized. Memos are synced so they're accessible anywhere, and searchable so you always find what you need. Learn more!</td></tr>
+<td> <table width="100%" style="border-spacing: 20px;">
+<tr><td colspan="5" align="center"><img src="https://png.icons8.com/ios/50/000000/unavailable-cloud.png" style="height:126px;border:0;"></td></tr>
+<tr><td colspan="5" align="center"><b>Everlaw</b></td></tr>
+<tr><td colspan="5" align="center">Ediscovery Software with Powerful Features in an Intuitive, Easy-to-Use Interface. Maximize your Document Search and Analysis with: Blink-Speed Search, Language Translation, Predictive Coding & Powerful Analytics & Customized Productions. For Big Law, Law Firms, Corporations and Government Entities.</td></tr>
 <tr><td colspan="1" align="center"><u>Stage</u></td>
 <td colspan="1" align="center"><u>Last Funding</u></td>
 <td colspan="1" align="center"><u>Last Funding Date</u></td>
 <td colspan="1" align="center"><u>Domain</u></td>
 <td colspan="1" align="center"><u>Region</u></td></tr>
-<tr><td align="center">late</td><td align="center">20000000USD</td>
-<td align="center">2014-11-09</td>
-<td align="center">evernote.com</td>
+<tr><td align="center">b</td><td align="center">25M USD</td>
+<td align="center">2018-06-28</td>
+<td align="center">everlaw.com</td>
 <td align="center">Bay Area</td>
 </tr>
 </table></td></tr><tr>
-<td><img src="https://static.kickstarter.com/assets/site/social/og-kickstarter-social-d58bfe030adf82001e25d3f7015eedb8ab84bc4bf9eeeeede5f8d8b0d02d641a.png" style="height:126px;width:126px;border:0;"></td>
-<td> <table width="100%">
-<tr><td colspan="5" align="center"><b>Kickstarter</b></td></tr>
-<tr><td colspan="5" align="center">Kickstarter is the world's largest funding platform for creative projects. A home for film, music, art, theater, games, comics, design, photography, and more.</td></tr>
+<td> <table width="100%" style="border-spacing: 20px;">
+<tr><td colspan="5" align="center"><img src="https://assets.republic.co/assets/social_share/cover--default-fe0d70ec7981971b038fea56e55220cbe377dc1264a69ad2279b3efa057f0f9c.png" style="height:126px;border:0;"></td></tr>
+<tr><td colspan="5" align="center"><b>Republic</b></td></tr>
+<tr><td colspan="5" align="center">An investment platform where you can invest as little as $10 in the startups you believe in.</td></tr>
 <tr><td colspan="1" align="center"><u>Stage</u></td>
 <td colspan="1" align="center"><u>Last Funding</u></td>
 <td colspan="1" align="center"><u>Last Funding Date</u></td>
 <td colspan="1" align="center"><u>Domain</u></td>
 <td colspan="1" align="center"><u>Region</u></td></tr>
-<tr><td align="center">a</td><td align="center">10000000USD</td>
-<td align="center">2011-03-18</td>
-<td align="center">kickstarter.com</td>
+<tr><td align="center">pre series a</td><td align="center">12M USD</td>
+<td align="center">2018-06-28</td>
+<td align="center">republic.co</td>
+<td align="center">Bay Area</td>
+</tr>
+</table></td></tr><tr>
+<td> <table width="100%" style="border-spacing: 20px;">
+<tr><td colspan="5" align="center"><img src="https://www.dronedeploy.com/img/dronedeploy-logo-rendered-whitebg.png" style="height:126px;border:0;"></td></tr>
+<tr><td colspan="5" align="center"><b>DroneDeploy</b></td></tr>
+<tr><td colspan="5" align="center">Work smarter with drone software. Capture images, create maps and 3D models, and analyze data across industries: agriculture, construction, insurance and more.</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">c</td><td align="center">25M USD</td>
+<td align="center">2018-06-26</td>
+<td align="center">dronedeploy.com</td>
+<td align="center">Bay Area</td>
+</tr>
+</table></td></tr><tr>
+<td> <table width="100%" style="border-spacing: 20px;">
+<tr><td colspan="5" align="center"><img src="https://bigid.com/wp-content/uploads/2017/08/logo_white_2.png" style="height:126px;border:0;"></td></tr>
+<tr><td colspan="5" align="center"><b>BigID</b></td></tr>
+<tr><td colspan="5" align="center">BigID helps organizations understand the risks and their potential exposure of that information through deep Data Science.</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">b</td><td align="center">30M USD</td>
+<td align="center">2018-06-25</td>
+<td align="center">bigid.com</td>
+<td align="center"></td>
+</tr>
+</table></td></tr><tr>
+<td> <table width="100%" style="border-spacing: 20px;">
+<tr><td colspan="5" align="center"><img src="https://png.icons8.com/ios/50/000000/unavailable-cloud.png" style="height:126px;border:0;"></td></tr>
+<tr><td colspan="5" align="center"><b>Agari Data</b></td></tr>
+<tr><td colspan="5" align="center">No description</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">late</td><td align="center">40M USD</td>
+<td align="center">2018-06-22</td>
+<td align="center">agari.com</td>
+<td align="center">Bay Area</td>
+</tr>
+</table></td></tr><tr>
+<td> <table width="100%" style="border-spacing: 20px;">
+<tr><td colspan="5" align="center"><img src="https://www.smartasset.com/images/fb/site.jpg" style="height:126px;border:0;"></td></tr>
+<tr><td colspan="5" align="center"><b>SmartAsset</b></td></tr>
+<tr><td colspan="5" align="center">SmartAsset's free and interactive tools help you make smarter decisions on home buying, refinance, retirement, life insurance, taxes, investing, personal loans, and more</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">c</td><td align="center">28M USD</td>
+<td align="center">2018-06-20</td>
+<td align="center">smartasset.com</td>
 <td align="center">New York</td>
+</tr>
+</table></td></tr><tr>
+<td> <table width="100%" style="border-spacing: 20px;">
+<tr><td colspan="5" align="center"><img src="https://cdn-1.wp.nginx.com/wp-content/themes/nginx-theme/assets/img/logo.png" style="height:126px;border:0;"></td></tr>
+<tr><td colspan="5" align="center"><b>Nginx</b></td></tr>
+<tr><td colspan="5" align="center">NGINX accelerates content and application delivery, improves security, facilitates availability and scalability for the busiest web sites on the Internet</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">c</td><td align="center">43M USD</td>
+<td align="center">2018-06-20</td>
+<td align="center">nginx.com</td>
+<td align="center">Bay Area</td>
 </tr>
 </table></td></tr></table></td></tr>

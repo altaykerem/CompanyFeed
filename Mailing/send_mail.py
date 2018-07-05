@@ -5,8 +5,6 @@ from email.mime.text import MIMEText
 
 def send_mail():
     # Send results saved in the file query_results
-    # os.environ.get("b_mail"), os.environ.get("a_mail"),
-    #                   os.environ.get("c_mail"),
     recipients = [os.environ.get("k_mail")]
     # ###Form html
     file_base = "/app"
