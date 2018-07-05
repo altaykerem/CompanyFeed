@@ -114,7 +114,6 @@ class Query:
 
     def page_info(self, data):
         # Updates pages
-        print(data)
         self.totalResults = data['data']['organizationSummaryQuery']['organizations']['totalResults']
         # !!!!!! Uncomment for use page usage (that is +50 companies returned)!!!!!!!!
         # page_info = data['data']['organizationSummaryQuery']['organizations']['pageInfo']
@@ -161,10 +160,10 @@ class Query:
 
                     # Write company data in html table format
                     wfile.write("<tr>\n")
-                    wfile.write("<td> <table width=\"100%\">\n")
+                    wfile.write("<td> <table width=\"100%\" style=\"border-spacing: 20px;\">\n")
 
                     wfile.write("<tr><td colspan=\"5\" align=\"center\"><img src=\""+meta_extractor.get_image(domain) +
-                                "\" style=\"height:126px;width:126px;border:0;\"></td></tr>\n")
+                                "\" style=\"height:126px;border:0;\"></td></tr>\n")
                     wfile.write("<tr><td colspan=\"5\" align=\"center\"><b>")
                     wfile.write(data_stem["name"])
                     wfile.write("</b></td></tr>\n")
