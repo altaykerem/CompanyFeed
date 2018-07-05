@@ -156,7 +156,7 @@ class Query:
                         funding_date = data_stem["companyPersona"]["lastFundingDate"]
 
                     # Assign company
-                    assign.add_assignment(domain)
+                    # assign.add_assignment(domain)
 
                     # Write company data in html table format
                     wfile.write("<tr>\n")
@@ -179,7 +179,7 @@ class Query:
                     wfile.write("<td colspan=\"1\" align=\"center\"><u>Region</u></td></tr>\n")
 
                     wfile.write("<tr><td align=\"center\">"+data_stem["companyPersona"]["companyStage"]+"</td>")
-                    wfile.write("<td align=\"center\">"+funding_amount+currency+"</td>\n")
+                    wfile.write("<td align=\"center\">"+funding_amount+" "+currency+"</td>\n")
                     wfile.write("<td align=\"center\">"+funding_date+"</td>\n")
                     wfile.write("<td align=\"center\">" + domain + "</td>\n")
                     wfile.write("<td align=\"center\">" + location + "</td>\n")
