@@ -114,6 +114,7 @@ class Query:
 
     def page_info(self, data):
         # Updates pages
+        print(data)
         self.totalResults = data['data']['organizationSummaryQuery']['organizations']['totalResults']
         # !!!!!! Uncomment for use page usage (that is +50 companies returned)!!!!!!!!
         # page_info = data['data']['organizationSummaryQuery']['organizations']['pageInfo']
