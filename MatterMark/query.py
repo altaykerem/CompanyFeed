@@ -156,7 +156,7 @@ class Query:
                         funding_date = data_stem["companyPersona"]["lastFundingDate"]
 
                     # Assign company
-                    # assign.add_assignment(domain)
+                    assign.add_assignment(domain)
 
                     # Write company data in html table format
                     wfile.write("<tr>\n")
