@@ -6,7 +6,7 @@ from Utils import utils
 sched = BlockingScheduler(timezone="UTC")
 
 
-@sched.scheduled_job('cron', day_of_week='mon-fri', hour=22, minute=48)
+@sched.scheduled_job('cron', day_of_week='fri', hour=14, minute=30)
 def scheduled_job():
     # #######Delete previous file content
     utils.clean_file("query_results.txt")
