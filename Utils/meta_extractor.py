@@ -1,13 +1,11 @@
 from bs4 import BeautifulSoup
 import requests
-from Utils import utils
 
 
 def get_description(domain):
     try:
         r = requests.get("http://" + domain)
-    except requests.exceptions.RequestException as e:
-        utils.log(e)
+    except requests.exceptions.RequestException:
         return "No description"
     soup = BeautifulSoup(r.content, "html.parser")
 
@@ -24,8 +22,7 @@ def get_description(domain):
 def get_image(domain):
     try:
         r = requests.get("http://" + domain)
-    except requests.exceptions.RequestException as e:
-        utils.log(e)
+    except requests.exceptions.RequestException:
         return "https://png.icons8.com/ios/50/000000/unavailable-cloud.png"
     soup = BeautifulSoup(r.content, "html.parser")
 
