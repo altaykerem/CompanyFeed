@@ -16,7 +16,8 @@ cred_json = {
   "client_x509_cert_url": os.environ.get('firebase_client_cert_url')
 }
 
-print("!!!!!!é'é"+cred_json.get('private_key_id'))
+print("qwert"+os.environ.get('firebase_private_key'))
+print("asdfg"+cred_json.get("private_key"))
 cred = credentials.Certificate(cred_json)
 
 
