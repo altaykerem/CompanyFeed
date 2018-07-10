@@ -1,9 +1,10 @@
 import os
+import codecs
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-private = str(os.environ.get('firebase_private_key'))
+private = codecs.decode(os.environ.get('firebase_private_key'), 'unicode_escape')
 cred_json = {
   "type": "service_account",
   "project_id": "company-feed",
@@ -17,8 +18,6 @@ cred_json = {
   "client_x509_cert_url": os.environ.get('firebase_client_cert_url')
 }
 
-print("asdfg"+cred_json.get("private_key"))
-print(cred_json)
 cred = credentials.Certificate(cred_json)
 
 
