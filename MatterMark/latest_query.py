@@ -16,9 +16,9 @@ class LatestQuery(query.Query):
         msfl = """msfl:\"{\
         \\"dataset\\": \\"companies\\",\
         \\"filter\\":{\\"and\\": [\
-            {\\"organizationMetrics.growthScore.current\\":{\\"gte\\":"""+params['growthMin']+"""}},\
-            {\\"organizationMetrics.growthScore.current\\":{\\"lte\\":"""+params['growthMax']+"""}},\
-            {\\"organizationMetrics.weeklyMomentumScore.current\\":{\\"gte\\":"""+params['momentumMin']+"""}},\
+            {\\"organizationMetrics.growthScore.current\\":{\\"gte\\":"""+str(params['growthMin'])+"""}},\
+            {\\"organizationMetrics.growthScore.current\\":{\\"lte\\":"""+str(params['growthMax'])+"""}},\
+            {\\"organizationMetrics.weeklyMomentumScore.current\\":{\\"gte\\":"""+str(params['momentumMin'])+"""}},\
             {\\"businessModels.name\\": \\"B2B\\" },\
             {\\"industries.name\\": {\\"in\\":\
                 [ \\"banking\\",\\"cloud computing\\", \\"enterprise software\\", \\"finance\\", \\"hardware\\",\
@@ -34,7 +34,7 @@ class LatestQuery(query.Query):
                 {\\"companyPersona.stage\\": \\"late\\"}]},\
             { \\"offices.location.country.iso3\\": \\"USA\\" }\
         ]},\
-        \\"sort\\": [ { \\"companyPersona.lastFundingDate\\":\\""""" + params['sort'] + """\\""} ]\
+        \\"sort\\": [ { \\"companyPersona.lastFundingDate\\":\\""""" + str(params['sort']) + """\\""} ]\
         }\" """
 
         search_query = self.base_query(msfl)
