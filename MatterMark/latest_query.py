@@ -1,4 +1,5 @@
 from MatterMark import query
+from Database import firebase_db_conn as db_dictionary
 
 
 class LatestQuery(query.Query):
@@ -8,18 +9,19 @@ class LatestQuery(query.Query):
         super().__init__()
 
     def create_query(self):
+        params = db_dictionary.get_parameters()
         # Targeted and sorted queries with MSFL
         # For msfl queries please refer to -->
         #   https://docs.mattermark.com/graphql_api/msfl/index.html
         msfl = """msfl:\"{\
         \\"dataset\\": \\"companies\\",\
         \\"filter\\":{\\"and\\": [\
-            {\\"organizationMetrics.growthScore.current\\":{\\"gte\\":100}},\
-            {\\"organizationMetrics.growthScore.current\\":{\\"lte\\":1500}},\
-            {\\"organizationMetrics.weeklyMomentumScore.current\\":{\\"gte\\":15}},\
+            {\\"organizationMetrics.growthScore.current\\":{\\"gte\\":"""+params['growthMin']+"""}},\
+            {\\"organizationMetrics.growthScore.current\\":{\\"lte\\":"""+params['growthMax']+"""}},\
+            {\\"organizationMetrics.weeklyMomentumScore.current\\":{\\"gte\\":"""+params['momentumMin']+"""}},\
             {\\"businessModels.name\\": \\"B2B\\" },\
             {\\"industries.name\\": {\\"in\\":\
-                [ \\"banking\\",\\"cloud\\", \\"enterprise software\\", \\"finance\\", \\"hardware\\",\
+                [ \\"banking\\",\\"cloud computing\\", \\"enterprise software\\", \\"finance\\", \\"hardware\\",\
                 \\"human resources\\", \\"internet of things\\", \\"insurance\\", \\"lending\\", \\"mobile\\",\
                 \\"payments\\", \\"robotics\\", \\"security\\", \\"software development\\",\
                 \\"technical support\\"] } },\
@@ -32,7 +34,7 @@ class LatestQuery(query.Query):
                 {\\"companyPersona.stage\\": \\"late\\"}]},\
             { \\"offices.location.country.iso3\\": \\"USA\\" }\
         ]},\
-        \\"sort\\": [ { \\"companyPersona.lastFundingDate\\": \\"desc\\" } ]\
+        \\"sort\\": [ { \\"companyPersona.lastFundingDate\\":\\""""" + params['sort'] + """\\""} ]\
         }\" """
 
         search_query = self.base_query(msfl)
