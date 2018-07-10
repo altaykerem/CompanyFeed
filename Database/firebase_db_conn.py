@@ -3,12 +3,12 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-priv = os.environ.get('firebase_private_key')
+private = str(os.environ.get('firebase_private_key'))
 cred_json = {
   "type": "service_account",
   "project_id": "company-feed",
   "private_key_id": os.environ.get('firebase_private_kID'),
-  "private_key": priv,
+  "private_key": private,
   "client_email": "firebase-adminsdk-f1ufm@company-feed.iam.gserviceaccount.com",
   "client_id": os.environ.get('firebase_cID'),
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
