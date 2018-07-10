@@ -1,4 +1,3 @@
-import json
 import os
 import firebase_admin
 from firebase_admin import credentials
@@ -16,8 +15,7 @@ cred_json = {
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
   "client_x509_cert_url": os.environ.get('firebase_client_cert_url')
 }
-print(cred_json)
-cred = credentials.Certificate(json.dumps(cred_json))
+cred = credentials.Certificate(cred_json)
 
 
 def get_parameters():
