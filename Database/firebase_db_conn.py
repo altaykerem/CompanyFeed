@@ -15,6 +15,8 @@ cred_json = {
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
   "client_x509_cert_url": os.environ.get('firebase_client_cert_url')
 }
+
+print("!!!!!!é'é"+cred_json.get('private_key_id'))
 cred = credentials.Certificate(cred_json)
 
 
