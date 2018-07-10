@@ -27,6 +27,3 @@ def get_parameters():
     params = param_ref.get()
 
     return params.to_dict()
-
-
-get_parameters()

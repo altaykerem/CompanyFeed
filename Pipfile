@@ -9,6 +9,7 @@ requests = "*"
 apscheduler = "*"
 "beautifulsoup4" = "*"
 tweepy = "*"
+firebase-admin = "*"
 
 [dev-packages]
 
