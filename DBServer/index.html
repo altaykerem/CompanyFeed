@@ -129,7 +129,6 @@
       <!-- functions -->
       <script>
         function adjustFilters(){
-        	window.alert("Button");
             // Initialize Firebase
             var config = {
                 apiKey: process.env.firebase_web_api,
@@ -139,7 +138,7 @@
                 storageBucket: "company-feed.appspot.com",
                 messagingSenderId: "115430820745"
             };
-            window.alert("API");
+            window.alert(process.env.firebase_web_api);
             firebase.initializeApp(config);
             var db = firebase.firestore();
 
