@@ -20,22 +20,7 @@
 </tr>
 </table></td></tr><tr>
 <td> <table width="100%" style="border-spacing: 20px;">
-<tr><td colspan="5" align="center"><img src="https://png.icons8.com/ios/50/000000/unavailable-cloud.png" style="height:126px;border:0;"></td></tr>
-<tr><td colspan="5" align="center"><b>Cerebri</b></td></tr>
-<tr><td colspan="5" align="center">No description</td></tr>
-<tr><td colspan="1" align="center"><u>Stage</u></td>
-<td colspan="1" align="center"><u>Last Funding</u></td>
-<td colspan="1" align="center"><u>Last Funding Date</u></td>
-<td colspan="1" align="center"><u>Domain</u></td>
-<td colspan="1" align="center"><u>Region</u></td></tr>
-<tr><td align="center">a</td><td align="center">5M USD</td>
-<td align="center">2018-06-28</td>
-<td align="center">cerebri.com</td>
-<td align="center">Austin</td>
-</tr>
-</table></td></tr><tr>
-<td> <table width="100%" style="border-spacing: 20px;">
-<tr><td colspan="5" align="center"><img src="https://www.bitsighttech.com/hubfs/images/landing-page-thumbnails/LP-Thumbnail-Scalable-VRM-Program-Ebook-1.png?t=1530822852596#keepProtocol" style="height:126px;border:0;"></td></tr>
+<tr><td colspan="5" align="center"><img src="https://www.bitsighttech.com/hubfs/images/landing-page-thumbnails/LP-Thumbnail-Scalable-VRM-Program-Ebook-1.png?t=1531245592290#keepProtocol" style="height:126px;border:0;"></td></tr>
 <tr><td colspan="5" align="center"><b>BitSight Technologies</b></td></tr>
 <tr><td colspan="5" align="center">BitSight Security Ratings are used for third party vendor risk management, benchmarking cybersecurity performance, underwriting cyber insurance policies & more.</td></tr>
 <tr><td colspan="1" align="center"><u>Stage</u></td>
@@ -51,17 +36,17 @@
 </table></td></tr><tr>
 <td> <table width="100%" style="border-spacing: 20px;">
 <tr><td colspan="5" align="center"><img src="https://png.icons8.com/ios/50/000000/unavailable-cloud.png" style="height:126px;border:0;"></td></tr>
-<tr><td colspan="5" align="center"><b>Everlaw</b></td></tr>
-<tr><td colspan="5" align="center">Ediscovery Software with Powerful Features in an Intuitive, Easy-to-Use Interface. Maximize your Document Search and Analysis with: Blink-Speed Search, Language Translation, Predictive Coding & Powerful Analytics & Customized Productions. For Big Law, Law Firms, Corporations and Government Entities.</td></tr>
+<tr><td colspan="5" align="center"><b>Cerebri</b></td></tr>
+<tr><td colspan="5" align="center">No description</td></tr>
 <tr><td colspan="1" align="center"><u>Stage</u></td>
 <td colspan="1" align="center"><u>Last Funding</u></td>
 <td colspan="1" align="center"><u>Last Funding Date</u></td>
 <td colspan="1" align="center"><u>Domain</u></td>
 <td colspan="1" align="center"><u>Region</u></td></tr>
-<tr><td align="center">b</td><td align="center">25M USD</td>
+<tr><td align="center">a</td><td align="center">5M USD</td>
 <td align="center">2018-06-28</td>
-<td align="center">everlaw.com</td>
-<td align="center">Bay Area</td>
+<td align="center">cerebri.com</td>
+<td align="center">Austin</td>
 </tr>
 </table></td></tr><tr>
 <td> <table width="100%" style="border-spacing: 20px;">
@@ -76,6 +61,21 @@
 <tr><td align="center">pre series a</td><td align="center">12M USD</td>
 <td align="center">2018-06-28</td>
 <td align="center">republic.co</td>
+<td align="center">Bay Area</td>
+</tr>
+</table></td></tr><tr>
+<td> <table width="100%" style="border-spacing: 20px;">
+<tr><td colspan="5" align="center"><img src="https://png.icons8.com/ios/50/000000/unavailable-cloud.png" style="height:126px;border:0;"></td></tr>
+<tr><td colspan="5" align="center"><b>Everlaw</b></td></tr>
+<tr><td colspan="5" align="center">Ediscovery Software with Powerful Features in an Intuitive, Easy-to-Use Interface. Maximize your Document Search and Analysis with: Blink-Speed Search, Language Translation, Predictive Coding & Powerful Analytics & Customized Productions. For Big Law, Law Firms, Corporations and Government Entities.</td></tr>
+<tr><td colspan="1" align="center"><u>Stage</u></td>
+<td colspan="1" align="center"><u>Last Funding</u></td>
+<td colspan="1" align="center"><u>Last Funding Date</u></td>
+<td colspan="1" align="center"><u>Domain</u></td>
+<td colspan="1" align="center"><u>Region</u></td></tr>
+<tr><td align="center">b</td><td align="center">25M USD</td>
+<td align="center">2018-06-28</td>
+<td align="center">everlaw.com</td>
 <td align="center">Bay Area</td>
 </tr>
 </table></td></tr><tr>

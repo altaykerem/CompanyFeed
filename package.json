@@ -1,0 +1,11 @@
+{
+  "name": "dbs",
+  "version": "1.0.0",
+  "description": "database parameter UI",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "kaltay",
+  "license": "ISC"
+}

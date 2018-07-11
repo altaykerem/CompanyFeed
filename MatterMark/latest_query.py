@@ -34,7 +34,7 @@ class LatestQuery(query.Query):
                 {\\"companyPersona.stage\\": \\"late\\"}]},\
             { \\"offices.location.country.iso3\\": \\"USA\\" }\
         ]},\
-        \\"sort\\": [ { \\"companyPersona.lastFundingDate\\":\\""""" + str(params['sort']) + """\\""} ]\
+        \\"sort\\": [ { \\"companyPersona.lastFundingDate\\":\\"desc\\"} ]\
         }\" """
 
         search_query = self.base_query(msfl)
