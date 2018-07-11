@@ -131,14 +131,13 @@
         function adjustFilters(){
             // Initialize Firebase
             var config = {
-                apiKey: process.env.firebase_web_api,
+                apiKey: window.env.firebase_web_api,
                 authDomain: "company-feed.firebaseapp.com",
                 databaseURL: "https://company-feed.firebaseio.com",
                 projectId: "company-feed",
                 storageBucket: "company-feed.appspot.com",
                 messagingSenderId: "115430820745"
             };
-            console.log(config)
             firebase.initializeApp(config);
             var db = firebase.firestore();
 
