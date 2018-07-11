@@ -138,7 +138,9 @@
                 storageBucket: "company-feed.appspot.com",
                 messagingSenderId: "115430820745"
             };
-            firebase.initializeApp(config);
+            if (!firebase.apps.length) {
+            	firebase.initializeApp(config);
+            }
             var db = firebase.firestore();
 
             var updateObject = {};
