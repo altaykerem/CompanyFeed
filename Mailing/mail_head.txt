@@ -21,3 +21,8 @@
                 <h2 style="color: #FFFFFF"> <i>Your Company Feed</i></h2>
             </td>
         </tr>
+        <tr>
+            <td align="center">
+                <a href="https://daily-company-feed.herokuapp.com/"><h3><u>Change Search Parameters</u></h3></a>
+            </td>
+        </tr>

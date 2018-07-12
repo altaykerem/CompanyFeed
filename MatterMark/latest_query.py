@@ -55,8 +55,10 @@ class LatestQuery(query.Query):
         wfile.write(" </h3></td></tr>")
         wfile.close()
 
-        super().write_query()
+        success = super().write_query()
 
         wfile = open("query_results.txt", "a")
         wfile.write("</table></td></tr>")
         wfile.close()
+
+        return success
