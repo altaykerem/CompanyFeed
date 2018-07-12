@@ -22,10 +22,9 @@ cred = credentials.Certificate(cred_json)
 
 
 def get_parameters():
-    firebase_admin.initialize_app(cred)
+    app = firebase_admin.initialize_app(cred)
     db = firestore.client()
-
     param_ref = db.collection('runtime').document('parameters')
     params = param_ref.get()
-
+    firebase_admin.delete_app(app)
     return params.to_dict()
