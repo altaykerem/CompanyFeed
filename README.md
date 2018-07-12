@@ -1,6 +1,6 @@
 # Company Digest
 
-Receive weekly updates to your mail on most recently funded companied and add them to your trello to-do list to organize your research. 
+Receive weekly updates to your mail on most recently funded companies and add them to your trello to-do list to organize your research. 
 
 ## Getting Started
 
