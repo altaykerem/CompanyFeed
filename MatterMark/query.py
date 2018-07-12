@@ -24,7 +24,7 @@ class Query:
     def __init__(self):
         # Get config
         self.api_base = os.environ.get("mm_graphql_api")
-        self.api_key = os.environ.get("api_key")
+        self.api_key = os.environ.get("mm_api_key")
 
     def base_query(self, msfl):
         # GraphQL wrapper for MatterMark
