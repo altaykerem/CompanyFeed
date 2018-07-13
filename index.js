@@ -1,18 +1,12 @@
-var http = require('http'); 
+var express = require('express')
+var app = express()
 
-var fs = require('fs'),
-    path = require('path'),    
-    filePath = path.join(__dirname, '/DBServer/index.html');
+app.use(express.static('DBServer'));
 
-http.createServer(function (req, res) {
-	fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
-	    if (!err) {
-	        console.log('received data: ' + data);
-	        res.writeHead(200, {'Content-Type': 'text/html'});
-	        res.write(data);
-	        res.end();
-	    } else {
-	        console.log(err);
-	    }
-	});
-}).listen(process.env.PORT || 5000);
+var server = app.listen(process.env.PORT || 5000, function () {
+
+    var port = server.address().port
+
+    console.log('Express app listening at port %s', port)
+
+});

@@ -7,3 +7,4 @@ Mailing/__pycache__/send_mail.cpython-36.pyc
 Database/__pycache__/
 Utils/__pycache__/
 tester.py
+node_modules/
