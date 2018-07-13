@@ -127,7 +127,7 @@
 
 							<div class="row">
 								<div class="col-md-2 text-center form-group">
-									<h2 onclick="adjustFilters()">Submit</h2>
+									<button type="button" class="btn btn-primary" onclick="adjustFilters()">Submit</button>
 								</div>
 							</div>
   						</form>
@@ -136,6 +136,28 @@
   			</div><!--/.container-->
   		</div>
   		<!--/.section -->
+		<!-- START SECTION -->
+  		<div class="section text-center  background-dark dark-bg">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col-md-8 col-md-offset-2">
+  						<h2 class="section-title">Mailing List Options</h2>
+						<div class="col-md-8 col-md-offset-2 text-center">
+							<h3>Add Mail</h3>
+							<input class="form-control" id="add_mail" name="add_mail" placeholder="enter email" type="text" />
+							<button type="button" class="btn btn-primary btn-block" onclick="addMail()">Add</button>
+						</div>
+						<div class="col-md-8 col-md-offset-2 text-center">
+							<h3>Remove Mail</h3>
+							<input class="form-control" id="remove_mail" name="remove_mail" placeholder="enter email" type="text" />
+							<button type="button" class="btn btn-primary btn-block" onclick="removeMail()">Remove</button>
+						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<!--/.section -->
+
 		<!-- js -->
 		<script type="text/javascript">
 			initializeDB();
@@ -177,7 +199,6 @@
 			    initializeDB();
 
 			    var db = firebase.firestore();
-			    var docRef = db.collection("runtime").doc("parameters");
 
 			    var updateObject = {};
 
@@ -215,6 +236,40 @@
 			    });
 
 			    window.alert("Parameters changed");
+			}
+
+			function addMail(){
+				initializeDB();
+				var db = firebase.firestore();
+
+				var mail = document.getElementById("add_mail").value;
+
+				db.collection("users").doc(mail).set({
+				    mail: mail
+				})
+				.then(function(docRef) {
+				    console.log("Document written with ID: ", docRef.id);
+				})
+				.catch(function(error) {
+				    console.error("Error adding document: ", error);
+				});
+
+				window.alert("Mail added");
+			}
+
+			function removeMail(){
+				initializeDB();
+				var db = firebase.firestore();
+
+				var mail = document.getElementById("remove_mail").value;
+
+				db.collection("users").doc(mail).delete().then(function() {
+				    console.log("Document successfully deleted!");
+				}).catch(function(error) {
+				    console.error("Error removing document: ", error);
+				});
+
+				window.alert("Mail removed");
 			}
 
 			function validateField(param){

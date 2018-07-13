@@ -28,3 +28,14 @@ def get_parameters():
     params = param_ref.get()
     firebase_admin.delete_app(app)
     return params.to_dict()
+
+
+def get_mailing_list():
+    app = firebase_admin.initialize_app(cred)
+    db = firestore.client()
+    users = db.collection('users').get()
+    mailing_dict = {}
+    for user in users:
+        mailing_dict[user.id] = user.to_dict()['mail']
+    firebase_admin.delete_app(app)
+    return mailing_dict

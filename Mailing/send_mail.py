@@ -1,12 +1,12 @@
 import os
 import smtplib
 from email.mime.text import MIMEText
+from Database import firebase_db_conn as db
 
 
 def send_mail():
     # Send results saved in the file query_results
-    recipients = [os.environ.get("b_mail"), os.environ.get("a_mail"),
-                  os.environ.get("c_mail"), os.environ.get("k_mail")]
+    recipients = db.get_mailing_list()
     # ###Form html
     file_base = "/app"
 
@@ -25,7 +25,8 @@ def send_mail():
     send_html = mail_head + mail_body + mail_foot
     # ###End of form html
 
-    for mail in recipients:
+    for user_id in recipients:
+        mail = recipients[user_id]
         send_client(mail, send_html)
 
 
