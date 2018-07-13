@@ -13,3 +13,12 @@ def log(text):
 
 def clean_file(file):
     open(file, "w").close()
+
+
+def decode_time(time):
+    time = time.split(":")
+    result = {
+        "hour": int(time[0]),
+        "minute": int(time[1])
+    }
+    return result
