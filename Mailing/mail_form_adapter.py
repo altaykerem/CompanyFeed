@@ -39,7 +39,8 @@ class MailAdapter:
             self.file_writer.write("<td colspan=\"1\" align=\"center\">" + content + "</td>\n")
         self.file_writer.write("</tr>\n")
 
-    def adapt_image(self, url):
+    @staticmethod
+    def adapt_image(url):
         return "<img src=\"" + url + "\" style=\"height:126px;border:0;\">"
 
     @staticmethod

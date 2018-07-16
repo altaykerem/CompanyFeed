@@ -142,6 +142,7 @@ class Query:
                     data_stem = company["node"]
                     org_id = data_stem["id"]
                     org_data = self.query(self.org_info_query(org_id))['data']['organization']
+                    print(org_data)
                     domain = org_data['domains'][0]['domain']
                     funding = data_stem["companyPersona"]["lastFundingAmount"]
                     funding_amount = "Undisclosed"
