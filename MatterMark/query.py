@@ -142,14 +142,17 @@ class Query:
                     data_stem = company["node"]
                     org_id = data_stem["id"]
                     org_data = self.query(self.org_info_query(org_id))['data']['organization']
-                    print(org_data)
                     domain = org_data['domains'][0]['domain']
                     funding = data_stem["companyPersona"]["lastFundingAmount"]
                     funding_amount = "Undisclosed"
                     currency = ""
                     funding_date_info = data_stem["companyPersona"]["lastFundingDate"]
                     funding_date = "Undisclosed"
-                    location = org_data['offices'][0]['location']['region']['name']
+
+                    if org_data['offices']:
+                        location = org_data['offices'][0]['location']['region']['name']
+                    else:
+                        location = "-"
 
                     if funding is not None:
                         funding_amount = str(data_stem["companyPersona"]["lastFundingAmount"]["value"])
