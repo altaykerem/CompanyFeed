@@ -30,7 +30,6 @@ class MailAdapter:
 
     # Add after a row, spans all columns
     def add_header_data(self, content, columns_num):
-        print(content)
         self.file_writer.write("<tr><td colspan=\""+str(columns_num)+"\" align=\"center\">")
         self.file_writer.write(content+"</td></tr>\n")
 
@@ -41,7 +40,7 @@ class MailAdapter:
         self.file_writer.write("</tr>\n")
 
     def adapt_image(self, url):
-        self.file_writer.write("<img src=\"" + url + "\" style=\"height:126px;border:0;\">")
+        return self.file_writer.write("<img src=\"" + url + "\" style=\"height:126px;border:0;\">")
 
     @staticmethod
     def make_bold(s):
