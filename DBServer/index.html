@@ -126,7 +126,7 @@
 							</div>
 
 							<div class="row">
-								<div class="col-md-2 text-center form-group">
+								<div class="col-md-4 col-md-offset-4 text-center form-group">
 									<button type="button" class="btn btn-primary" onclick="adjustFilters()">Submit</button>
 								</div>
 							</div>
@@ -144,12 +144,12 @@
   						<h2 class="section-title">Mailing List Options</h2>
 						<div class="col-md-8 col-md-offset-2 text-center">
 							<h3>Add Mail</h3>
-							<input class="form-control" id="add_mail" name="add_mail" placeholder="enter email" type="text" />
+							<input class="form-control" id="add_mail" name="add_mail" placeholder="enter email" type="email"/>
 							<button type="button" class="btn btn-primary btn-block" onclick="addMail()">Add</button>
 						</div>
 						<div class="col-md-8 col-md-offset-2 text-center">
 							<h3>Remove Mail</h3>
-							<input class="form-control" id="remove_mail" name="remove_mail" placeholder="enter email" type="text" />
+							<input class="form-control" id="remove_mail" name="remove_mail" placeholder="enter email" type="email"/>
 							<button type="button" class="btn btn-primary btn-block" onclick="removeMail()">Remove</button>
 						</div>
   					</div>
@@ -239,22 +239,26 @@
 			}
 
 			function addMail(){
-				initializeDB();
-				var db = firebase.firestore();
-
 				var mail = document.getElementById("add_mail").value;
 
-				db.collection("users").doc(mail).set({
-				    mail: mail
-				})
-				.then(function(docRef) {
-				    console.log("Document written with ID: ", docRef.id);
-				})
-				.catch(function(error) {
-				    console.error("Error adding document: ", error);
-				});
+				if (validateEmail(mail)) {
+					initializeDB();
+					var db = firebase.firestore();
 
-				window.alert("Mail added");
+					db.collection("users").doc(mail).set({
+					    mail: mail
+					})
+					.then(function(docRef) {
+					    console.log("Document written with ID: ", docRef.id);
+					})
+					.catch(function(error) {
+					    console.error("Error adding document: ", error);
+					});
+
+					window.alert("Mail added");
+				}else {
+					window.alert("Provide a valid email");
+				}
 			}
 
 			function removeMail(){
@@ -277,6 +281,10 @@
 			      return true;
 			    }
 			    return false;
+			}
+			function validateEmail(email) {
+			    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			    return re.test(String(email).toLowerCase());
 			}
 		</script>
   		<!-- jQuery -->

@@ -28,7 +28,7 @@ def scheduled_job():
 
 def check_job_date():
     # Check if the execution date is changed (checks once in every hour)
-    db_date = db_dictionary.get_parameters()["test_val"]
+    db_date = db_dictionary.get_parameters()["day"]
     db_hour = utils.decode_time(db_dictionary.get_parameters()["time"])["hour"]
     db_minute = utils.decode_time(db_dictionary.get_parameters()["time"])["minute"]
 
@@ -37,7 +37,7 @@ def check_job_date():
         date = db_date
         sched.remove_job('job')
         sched.add_job(scheduled_job, 'cron', day_of_week=date, hour=hour, minute=minute, id='job')
-    if hour != db_date:
+    if hour != db_hour:
         hour = db_hour
         minute = db_minute
         sched.remove_job('job')
