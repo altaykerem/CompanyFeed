@@ -1,5 +1,6 @@
 from MatterMark import query
 from Database import firebase_db_conn as db_dictionary
+from Mailing import mail_form_adapter as mailing
 
 
 class LatestQuery(query.Query):
@@ -42,23 +43,15 @@ class LatestQuery(query.Query):
 
     def write_query(self):
         # Write results to the file query_results
-        wfile = open("query_results.txt", "a")
-
-        open_table = """
-        <tr>
-            <td bgcolor="#ffffff">
-                <table border="1" cellpadding="0" cellspacing="0" width="100%%">
-                    <tr>
-                        <td colspan="6"><h3 align="center">"""
-        wfile.write(open_table)
-        wfile.write("Latest fundings")
-        wfile.write(" </h3></td></tr>")
-        wfile.close()
+        mail_adaptor = mailing.MailAdapter()
+        mail_adaptor.open_file("query_results.txt")
+        mail_adaptor.open_table("Latest fundings", 5)
+        mail_adaptor.close_file()
 
         success = super().write_query()
 
-        wfile = open("query_results.txt", "a")
-        wfile.write("</table></td></tr>")
-        wfile.close()
+        mail_adaptor.open_file("query_results.txt")
+        mail_adaptor.close_table()
+        mail_adaptor.close_file()
 
         return success
