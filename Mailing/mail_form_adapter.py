@@ -40,7 +40,7 @@ class MailAdapter:
         self.file_writer.write("</tr>\n")
 
     def adapt_image(self, url):
-        return self.file_writer.write("<img src=\"" + url + "\" style=\"height:126px;border:0;\">")
+        return "<img src=\"" + url + "\" style=\"height:126px;border:0;\">"
 
     @staticmethod
     def make_bold(s):
