@@ -24,7 +24,6 @@ class MailAdapter:
     def open_row(self):
         self.file_writer.write("<tr>\n")
         self.file_writer.write("<td> <table width=\"100%\" style=\"border-spacing: 20px;\">\n")
-        self.file_writer.write("<tr>\n")
 
     def close_row(self):
         self.file_writer.write("</table></td></tr>\n")

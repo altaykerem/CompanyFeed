@@ -4,6 +4,7 @@ import json
 from Trello import assign
 from Utils import meta_extractor
 from Utils import utils
+from Mailing import mail_form_adapter as mailing
 
 
 # This class is the parent class of organization queries
@@ -126,7 +127,9 @@ class Query:
 
     def write_query(self):
         # Write results to the file query_results
-        wfile = open("query_results.txt", "a")
+        mail_adaptor = mailing.MailAdapter()
+        mail_adaptor.open_file("query_results.txt")
+
         while self.hasNextPage is True:
             q_data = self.query(self.create_query())
             self.hasNextPage = False
@@ -159,35 +162,25 @@ class Query:
                     assign.add_assignment(domain)
 
                     # Write company data in html table format
-                    wfile.write("<tr>\n")
-                    wfile.write("<td> <table width=\"100%\" style=\"border-spacing: 20px;\">\n")
+                    mail_adaptor.open_row()
 
-                    wfile.write("<tr><td colspan=\"5\" align=\"center\"><img src=\""+meta_extractor.get_image(domain) +
-                                "\" style=\"height:126px;border:0;\"></td></tr>\n")
-                    wfile.write("<tr><td colspan=\"5\" align=\"center\"><b>")
-                    wfile.write(data_stem["name"])
-                    wfile.write("</b></td></tr>\n")
+                    # image, name, description
+                    company_image = mail_adaptor.adapt_image(meta_extractor.get_image(domain))
+                    mail_adaptor.add_header_data(company_image, 5)
+                    mail_adaptor.add_header_data(mail_adaptor.make_bold(data_stem["name"]), 5)
+                    mail_adaptor.add_header_data(meta_extractor.get_description(domain), 5)
 
-                    wfile.write("<tr><td colspan=\"5\" align=\"center\">")
-                    wfile.write(meta_extractor.get_description(domain))
-                    wfile.write("</td></tr>\n")
+                    columns = ["Stage", "Last Funding", "Last Funding Date", "Domain", "Region"]
+                    mail_adaptor.add_row_data(columns)
 
-                    wfile.write("<tr><td colspan=\"1\" align=\"center\"><u>Stage</u></td>\n")
-                    wfile.write("<td colspan=\"1\" align=\"center\"><u>Last Funding</u></td>\n")
-                    wfile.write("<td colspan=\"1\" align=\"center\"><u>Last Funding Date</u></td>\n")
-                    wfile.write("<td colspan=\"1\" align=\"center\"><u>Domain</u></td>\n")
-                    wfile.write("<td colspan=\"1\" align=\"center\"><u>Region</u></td></tr>\n")
+                    values = [data_stem["companyPersona"]["companyStage"],
+                              funding_amount+" "+currency,
+                              funding_date, domain, location]
+                    mail_adaptor.add_row_data(values)
 
-                    wfile.write("<tr><td align=\"center\">"+data_stem["companyPersona"]["companyStage"]+"</td>")
-                    wfile.write("<td align=\"center\">"+funding_amount+" "+currency+"</td>\n")
-                    wfile.write("<td align=\"center\">"+funding_date+"</td>\n")
-                    wfile.write("<td align=\"center\">" + domain + "</td>\n")
-                    wfile.write("<td align=\"center\">" + location + "</td>\n")
-                    wfile.write("</tr>\n")
-
-                    wfile.write("</table></td></tr>")
+                    mail_adaptor.close_row()
             else:
                 utils.log("Returned data is null...")
                 return False
-        wfile.close()
+        mail_adaptor.close_file()
         return True
