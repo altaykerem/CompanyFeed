@@ -30,6 +30,7 @@ class MailAdapter:
 
     # Add after a row, spans all columns
     def add_header_data(self, content, columns_num):
+        print(content)
         self.file_writer.write("<tr><td colspan=\""+str(columns_num)+"\" align=\"center\">")
         self.file_writer.write(content+"</td></tr>\n")
 
