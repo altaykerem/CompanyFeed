@@ -10,7 +10,7 @@ from Database import firebase_db_conn as db_dictionary
 
 # This class is the parent class of organization queries
 class Query:
-    currentPage = 0
+    currentPage = 1
     hasNextPage = True
     totalResults = None
     pageSize = 10
