@@ -59,7 +59,6 @@ class Query:
                 totalResults
             }}
         }"""
-        print(query)
         # GraphQL structure is pretty similar to json, yet it's not meant to store data but to get related fields
         # in JSON format.
         # So the query defines what to retrieve from the database in the request. Format isn't KEY:VALUE,
@@ -136,6 +135,7 @@ class Query:
             self.hasNextPage = False
             if q_data is not None:
                 self.page_info(q_data)
+                print(q_data)
                 data_organizations = q_data['data']['organizationSummaryQuery']['organizations']['edges']
                 print("Data successfully retrieved...")
                 for company in data_organizations:
