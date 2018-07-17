@@ -1,4 +1,5 @@
 from MatterMark import query
+from Mailing import mail_form_adapter as mailing
 
 
 class ScoreQuery(query.Query):
@@ -39,21 +40,15 @@ class ScoreQuery(query.Query):
 
     def write_query(self):
         # Write results to the file query_results
-        wfile = open("query_results.txt", "a")
+        mail_adaptor = mailing.MailAdapter()
+        mail_adaptor.open_file("query_results.txt")
+        mail_adaptor.open_table("Top 10 Highest scorers", 5)
+        mail_adaptor.close_file()
 
-        open_table = """
-        <tr>
-            <td bgcolor="#ffffff">
-                <table border="1" cellpadding="0" cellspacing="0" width="100%%">
-                    <tr>
-                        <td colspan="6"><h3 align="center">"""
-        wfile.write(open_table)
-        wfile.write("Top 10 Highest scorers")
-        wfile.write(" </h3></td></tr>")
-        wfile.close()
+        success = super().write_query()
 
-        super().write_query()
+        mail_adaptor.open_file("query_results.txt")
+        mail_adaptor.close_table()
+        mail_adaptor.close_file()
 
-        wfile = open("query_results.txt", "a")
-        wfile.write("</table></td></tr>")
-        wfile.close()
+        return success

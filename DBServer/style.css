@@ -190,6 +190,9 @@ a {
 .btn-danger:hover {
 	background-color: #c0392b;
 }
+.btn-toggle {
+    top: 50%;
+  }
 .btn-link {}
 
 /*	NAVBAR

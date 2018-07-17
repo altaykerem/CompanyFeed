@@ -39,3 +39,12 @@ def get_mailing_list():
         mailing_dict[user.id] = user.to_dict()['mail']
     firebase_admin.delete_app(app)
     return mailing_dict
+
+
+def get_functions():
+    app = firebase_admin.initialize_app(cred)
+    db = firestore.client()
+    func_ref = db.collection('runtime').document('functionalities')
+    params = func_ref.get()
+    firebase_admin.delete_app(app)
+    return params.to_dict()

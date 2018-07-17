@@ -5,6 +5,7 @@ from Trello import assign
 from Utils import meta_extractor
 from Utils import utils
 from Mailing import mail_form_adapter as mailing
+from Database import firebase_db_conn as db_dictionary
 
 
 # This class is the parent class of organization queries
@@ -58,7 +59,7 @@ class Query:
                 totalResults
             }}
         }"""
-
+        print(query)
         # GraphQL structure is pretty similar to json, yet it's not meant to store data but to get related fields
         # in JSON format.
         # So the query defines what to retrieve from the database in the request. Format isn't KEY:VALUE,
@@ -167,7 +168,9 @@ class Query:
                         funding_date = data_stem["companyPersona"]["lastFundingDate"]
 
                     # Assign company
-                    assign.add_assignment(domain)
+                    trello = db_dictionary.get_functions()['trello']
+                    if trello:
+                        assign.add_assignment(domain)
 
                     # Write company data in html table format
                     mail_adaptor.open_row()
