@@ -34,7 +34,7 @@ class Query:
         #       https://docs.mattermark.com/graphql_api/schema/index.html
         # Returns a list of organizations with fields specified as below that satisfies conditions in child classes
         query = """query {organizationSummaryQuery("""+msfl+""") {
-            organizations(first:""" + str(self.pageSize) + self.page_map[self.currentPage] + """) {
+            organizations(first:10) {
                 edges {
                     cursor
                     node {
