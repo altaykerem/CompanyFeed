@@ -34,7 +34,7 @@ class Query:
         #       https://docs.mattermark.com/graphql_api/schema/index.html
         # Returns a list of organizations with fields specified as below that satisfies conditions in child classes
         query = """query {organizationSummaryQuery("""+msfl+""") {
-            organizations(first:10) {
+            organizations(first:1) {
                 edges {
                     cursor
                     node {
@@ -59,6 +59,7 @@ class Query:
                 totalResults
             }}
         }"""
+        print(query)
         # GraphQL structure is pretty similar to json, yet it's not meant to store data but to get related fields
         # in JSON format.
         # So the query defines what to retrieve from the database in the request. Format isn't KEY:VALUE,
@@ -116,7 +117,6 @@ class Query:
     def page_info(self, data):
         # Updates pages
         self.totalResults = data['data']['organizationSummaryQuery']['organizations']['totalResults']
-        # !!!!!! Uncomment for use page usage (that is +50 companies returned)!!!!!!!!
         # page_info = data['data']['organizationSummaryQuery']['organizations']['pageInfo']
         # self.currentPage = data['data']['organizationSummaryQuery']['organizations']['currentPage']
         # self.hasNextPage = page_info['hasNextPage']
