@@ -10,7 +10,7 @@ from Database import firebase_db_conn as db_dictionary
 
 # This class is the parent class of organization queries
 class Query:
-    currentPage = 1
+    currentPage = 0
     hasNextPage = True
     totalResults = None
     pageSize = 10
@@ -34,7 +34,7 @@ class Query:
         #       https://docs.mattermark.com/graphql_api/schema/index.html
         # Returns a list of organizations with fields specified as below that satisfies conditions in child classes
         query = """query {organizationSummaryQuery("""+msfl+""") {
-            organizations(first: 1, after: "0|1") {
+            organizations(first: 5, after: "0|50") {
                 edges {
                     cursor
                     node {
