@@ -37,7 +37,7 @@ class LatestQuery(query.Query):
                 {\\"companyPersona.stage\\": \\"late\\"}]},\
             { \\"offices.location.country.iso3\\": \\"USA\\" }\
         ]},\
-        \\"sort\\": [ {"""+"\""+srt_criteria+"\""+":\""+sort_dir+"\""+"""} ]\
+        \\"sort\\": [ {"""+"\\\""+srt_criteria+"\\\""+":\\\""+sort_dir+"\\\""+"""} ]\
          }\" """
 
         search_query = self.base_query(msfl)
