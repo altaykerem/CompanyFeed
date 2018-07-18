@@ -11,6 +11,8 @@ class LatestQuery(query.Query):
 
     def create_query(self):
         params = db_dictionary.get_parameters()
+        sort_dir = params['sort']
+        srt_criteria = self.map_sort_criteria(params['criteria'])
         # Targeted and sorted queries with MSFL
         # For msfl queries please refer to -->
         #   https://docs.mattermark.com/graphql_api/msfl/index.html
@@ -35,8 +37,8 @@ class LatestQuery(query.Query):
                 {\\"companyPersona.stage\\": \\"late\\"}]},\
             { \\"offices.location.country.iso3\\": \\"USA\\" }\
         ]},\
-        \\"sort\\": [ { \\"companyPersona.lastFundingDate\\":\\"desc\\"} ]\
-        }\" """
+        \\"sort\\": [ {"""+"\""+srt_criteria+"\""+":\""+sort_dir+"\""+"""} ]\
+         }\" """
 
         search_query = self.base_query(msfl)
         return search_query
