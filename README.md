@@ -40,7 +40,7 @@ web: npm start
 
 Deploy the project to Heroku. From the command line run,
 ```
-heroku run bash –app daily-company-feed 
+heroku run bash –-app daily-company-feed 
 ```
 This provides an SSH like connection the app. 
 Mattermark sandbox configurations can be found in https://docs.mattermark.com/graphql_api/index.html. 
