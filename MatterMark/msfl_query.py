@@ -47,7 +47,7 @@ class MSFLQuery(query.Query):
         # Write results to the file query_results
         mail_adaptor = mailing.MailAdapter()
         mail_adaptor.open_file("query_results.txt")
-        mail_adaptor.open_table("Latest fundings", 5)
+        mail_adaptor.open_table("Results", 5)
         mail_adaptor.close_file()
 
         success = super().write_query()
