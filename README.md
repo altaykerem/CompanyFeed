@@ -10,14 +10,14 @@ Receive weekly updates to your mail on most recently funded companies and add th
       * [Dynos]
       * [Testing] 
       * [Envronment Variables]
-   *[Database]
-      *[Database Python]
-      *[Database Web]
-   *[Mailing]
-      *[Add source to mail]
-   *[Mattermark]
-   *[Trello]
-   *[Logging]
+   * [Database]
+      * [Database Python]
+      * [Database Web]
+   * [Mailing]
+      * [Add source to mail]
+   * [Mattermark]
+   * [Trello]
+   * [Logging]
 <!--te-->
 
 ## Getting Started
