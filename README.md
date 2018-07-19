@@ -68,7 +68,7 @@ Used Firebase Cloud Firestore as the database. Firestore is based on collections
 Firebase admin credentials are needed to run. Database elements are available as dictionaries from [/Database/firebase_db_conn.py]( Database/firebase_db_conn.py ).
 
 ### Database-Web
-Firebase Web API is needed. [/DBServer/index.html]( DBServer/index.html ) connects to Firebase to as a web interface to change values inside “parameters”. 
+Firebase Web API is needed. [/DBServer/index.html]( DBServer/index.html ) connects to Firebase as a web interface to change values inside “parameters”. 
 
 ## Mailing
 A google mail is needed for sending mails. [/Mailling/send_mail.py](Mailing/send_mail.py) is responsible the responsible file. Pulls the mailing information from the file query_results.txt. 
