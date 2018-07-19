@@ -4,12 +4,20 @@ Receive weekly updates to your mail on most recently funded companies and add th
 
 ## Table of contents
 <!--ts-->
-   * [Table of contents] (#Table-of-contents)
-   * [Getting Started] (#Getting Started)
-   * [Deployment] (#Deployment, Heroku)
-      * [Dynos] (#Heroku – Dynos)
-      * [Testing] (#Heroku – Testing)
-      * [Envronment Variables] (#Heroku – Environment Variables)
+   * [Table of contents]
+   * [Getting Started]
+   * [Deployment] 
+      * [Dynos]
+      * [Testing] 
+      * [Envronment Variables]
+   *[Database]
+      *[Database Python]
+      *[Database Web]
+   *[Mailing]
+      *[Add source to mail]
+   *[Mattermark]
+   *[Trello]
+   *[Logging]
 <!--te-->
 
 ## Getting Started
@@ -62,7 +70,7 @@ Firebase admin credentials are needed to run. Database elements are available as
 ### Database-Web
 Firebase Web API is needed. [/DBServer/index.html]( DBServer/index.html ) connects to Firebase to as a web interface to change values inside “parameters”. 
 
-### Mailing
+## Mailing
 A google mail is needed for sending mails. [/Mailling/send_mail.py](Mailing/send_mail.py) is responsible the responsible file. Pulls the mailing information from the file query_results.txt. 
 
 ### How to add information to Mail
@@ -83,11 +91,13 @@ mail_adaptor.close_table()
 mail_adaptor.close_file()
 ```
 
-### Mattermark
+## Mattermark
+Mattermark API will expire after 1 year. <br />
 Uses the GraphQL API and MSFL for querying over Mattermark. Refer to https://docs.mattermark.com/graphql_api/schema/index.html and https://docs.mattermark.com/graphql_api/msfl/index.html for more information about the API.  Query.py is a parent class that indicates which company information is going to be retrieved. It should be extended by a class that calls its base_query(msfl) method with the filtering and sorting information indicated by the MSFL structure. 
 
-### Trello
+## Trello
+Trello assignments can be turned on/off from the web UI. <br />
 Specify Trello API as well as board and list ID’s for using Trello assignments. To get the ID’s, go to your board url and type .json (such as https://trello.com/b/ZpEiFgBX/board.json). Id is the ID of the board and you can navigate through the lists field for the list id. 
 
-### Logging
+## Logging
 Logs are kept in a file called log, you can call the log function from utils. 
