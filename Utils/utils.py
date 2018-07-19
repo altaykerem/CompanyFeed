@@ -9,7 +9,7 @@ def number_formatter(n):
 
 
 def log(text):
-    now = datetime.datetime.now().time()
+    now = str(datetime.datetime.now().time())
     wfile = open("log", "a")
     wfile.write("["+now+"]: "+text+"\n")
     wfile.close()
