@@ -35,7 +35,7 @@ Mattermark sandbox configurations can be found in https://docs.mattermark.com/gr
 
 ### Heroku – Environment Variables
 
-**Mattermark API will expire after 1 year, check your plan in https://mattermark.com/app/account/api.**
+**Mattermark API will expire after 1 year,** check your plan in https://mattermark.com/app/account/api.
  Before deploying the project check that the environment variables are set. 
 ```
 mail_addr: Server email address
