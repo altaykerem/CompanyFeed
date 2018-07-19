@@ -71,7 +71,8 @@ Firebase admin credentials are needed to run. Database elements are available as
 Firebase Web API is needed. [/DBServer/index.html]( DBServer/index.html ) connects to Firebase as a web interface to change values inside “parameters”. 
 
 ## Mailing
-A google mail is needed for sending mails. [/Mailling/send_mail.py](Mailing/send_mail.py) is responsible the responsible file. Pulls the mailing information from the file query_results.txt. 
+A google mail is needed for sending mails. [/Mailling/send_mail.py](Mailing/send_mail.py) is responsible the responsible file. Pulls the mailing information from the file query_results.txt. <br />
+You can add or remove mails from the web UI. 
 
 ### How to add information to Mail
 Html mails relies on having nested tables to form the mail. [/Mailing/mail_form_adapter.py](Mailing/mail_form_adapter.py) contains the class MailAdapter to form the html table form. 
