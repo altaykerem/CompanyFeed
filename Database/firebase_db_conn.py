@@ -7,10 +7,10 @@ from firebase_admin import firestore
 private = codecs.decode(os.environ.get('firebase_private_key'), 'unicode_escape')
 cred_json = {
   "type": "service_account",
-  "project_id": "company-feed",
+  "project_id": "company-feed-kaltay",
   "private_key_id": os.environ.get('firebase_private_kID'),
   "private_key": private,
-  "client_email": "firebase-adminsdk-f1ufm@company-feed.iam.gserviceaccount.com",
+  "client_email": "firebase-adminsdk-wqy9n@company-feed-kaltay.iam.gserviceaccount.com",
   "client_id": os.environ.get('firebase_cID'),
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
   "token_uri": "https://accounts.google.com/o/oauth2/token",
