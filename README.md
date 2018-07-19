@@ -4,12 +4,12 @@ Receive weekly updates to your mail on most recently funded companies and add th
 
 ## Table of contents
 <!--ts-->
-   * [Table of contents](#Table of contents)
-   * [Getting Started](#Getting Started)
-   * [Deployment](#Deployment, Heroku)
-      * [Dynos](#Heroku – Dynos)
-      * [Testing](#Heroku – Testing)
-      * [Envronment Variables](#Heroku – Environment Variables)
+   * [Table of contents] (#Table-of-contents)
+   * [Getting Started] (#Getting Started)
+   * [Deployment] (#Deployment, Heroku)
+      * [Dynos] (#Heroku – Dynos)
+      * [Testing] (#Heroku – Testing)
+      * [Envronment Variables] (#Heroku – Environment Variables)
 <!--te-->
 
 ## Getting Started
@@ -23,10 +23,10 @@ Pipfile and package.json are needed for deployment in Heroku. This way it can in
 ### Heroku – Dynos
 
 There are two dynos, one for periodic mails and the other for the web interface. Procfile commands as provided below;
-'''
+```
 clock: python main.py
 web: npm start
-'''
+```
 
 ### Heroku – Testing
 
@@ -35,8 +35,9 @@ Mattermark sandbox configurations can be found in https://docs.mattermark.com/gr
 
 ### Heroku – Environment Variables
 
-*  Mattermark API will expire after 1 year
+**Mattermark API will expire after 1 year, check your plan in https://mattermark.com/app/account/api**
 Before deploying the project check that the environment variables are set. 
+```
 mail_addr: Server email address
 mail_pass: Server email password
 firebase_cID: Firebase admin client ID
@@ -47,6 +48,7 @@ firebase_web_api: Firebase web API key
 mm_api_key: Mattermark API key
 mm_graphql_api: Mattermark request url
 trello_api: Trello API key
- trello_token: Trello token
+trello_token: Trello token
 trello_board: Trello board id
 trello_list: Trello list id
+```
