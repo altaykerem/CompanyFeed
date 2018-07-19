@@ -3,7 +3,7 @@ from Database import firebase_db_conn as db_dictionary
 from Mailing import mail_form_adapter as mailing
 
 
-class LatestQuery(query.Query):
+class MSFLQuery(query.Query):
 
     def __init__(self):
         # Get config
