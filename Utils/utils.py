@@ -1,3 +1,6 @@
+import datetime
+
+
 def number_formatter(n):
     abbreviations = ["", "K", "M", "B", "T", "quad"]
     n = "{:,}".format(int(n))
@@ -6,8 +9,9 @@ def number_formatter(n):
 
 
 def log(text):
+    now = datetime.datetime.now().time()
     wfile = open("log", "a")
-    wfile.write(text+"\n")
+    wfile.write("["+now+"]: "+text+"\n")
     wfile.close()
 
 
