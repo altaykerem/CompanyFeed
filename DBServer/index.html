@@ -44,10 +44,10 @@
   						<h2 class="section-title">Query Control</h2>
 						<p class="section-description">Design your search parameters for the best fit</p>
 						<h2>Notes</h2>
-						<p>Date can be in the form of fri or mon. For all weekdays type mon-fri</p>
 						<p>Already developed companies have high growth score, an upper bound might shift the focus to developing companies</p>
 						<p>Momentum is the weekly change in growth</p>
-						<p>Page size determines the number of results returned</p>
+						<p>Companies with growth score higher than 1500 are already developed</p>
+						<p>Momentum range of [-500,1000] is sane for startups</p>
   					</div>
   				</div>
   			</div>
@@ -71,7 +71,16 @@
 									<input class="form-control" id="time" name="time" placeholder="time" type="text" />
 								</div>
 								<div class="col-md-4 form-group">
-									<input class="form-control" id="day" name="day" placeholder="day" type="text" />
+									<select class="form-control" id="day" name="day" placeholder="day">
+										<option value="mon">Monday</option>
+										<option value="tue">Tuesday</option>
+										<option value="wed">Wednesday</option>
+										<option value="thu">Thursday</option>
+										<option value="fri">Friday</option>
+										<option value="sat">Saturday</option>
+										<option value="sun">Sunday</option>
+										<option value="mon-fri">Weekdays</option>
+									</select>
 								</div>
 							</div>
 
@@ -98,7 +107,7 @@
 
 							<div class="row">
 								<div class="col-md-4">
-									<p class="text-center">Page Size</p>
+									<p class="text-center">Number of Results</p>
 								</div>
 								<div class="col-md-8 form-group">
 									<input class="form-control" id="query-size" name="query-size" value="10" type="text" />
